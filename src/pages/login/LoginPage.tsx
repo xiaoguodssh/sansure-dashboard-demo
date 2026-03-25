@@ -1,15 +1,31 @@
-import { Button, Card, Select, Space, Typography } from 'antd';
+import { useState } from 'react';
+import { Button, Card, Input, message, Select, Space, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { roleOptions } from '../../mocks/datasets/permissions';
 import { useAuthStore } from '../../store/auth/useAuthStore';
 import type { UserRole } from '../../types/app';
 
+const ADMIN_USERNAME = 'admin';
+const ADMIN_PASSWORD = 'sansure123!@#';
+
 export function LoginPage() {
   const navigate = useNavigate();
   const role = useAuthStore((state) => state.role);
   const login = useAuthStore((state) => state.login);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const isChairman = role === 'chairman';
 
   const handleEnter = () => {
+    if (!isChairman) {
+      message.warning('其他角色演示功能暂未开放');
+      return;
+    }
+    if (username !== ADMIN_USERNAME || password !== ADMIN_PASSWORD) {
+      message.error('账号或密码错误');
+      return;
+    }
     login(role);
     navigate('/overview');
   };
@@ -28,7 +44,26 @@ export function LoginPage() {
             onChange={(value) => useAuthStore.setState({ role: value })}
             options={roleOptions}
           />
-          <Button type="primary" block onClick={handleEnter}>
+          {isChairman && (
+            <Space direction="vertical" style={{ width: '100%' }}>
+              <Input
+                placeholder="账号"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <Input.Password
+                placeholder="密码"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Space>
+          )}
+          <Button
+            type="primary"
+            block
+            onClick={handleEnter}
+            disabled={isChairman && (!username || !password)}
+          >
             进入驾驶舱
           </Button>
         </Space>
