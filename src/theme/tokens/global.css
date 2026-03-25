@@ -1,0 +1,109 @@
+:root {
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  --app-bg: #f5f7fb;
+  --app-text: #1e2c3a;
+  --app-title: #0f1f2f;
+  --app-card-bg: #ffffff;
+  --app-header-bg: #ffffff;
+  --app-border: #dfe6ef;
+  --app-kpi-bg: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+[data-theme-mode='business'] {
+  --app-bg: #f5f7fb;
+  --app-text: #1e2c3a;
+  --app-title: #0f1f2f;
+  --app-card-bg: #ffffff;
+  --app-header-bg: #ffffff;
+  --app-border: #dfe6ef;
+  --app-kpi-bg: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+[data-theme-mode='tech'] {
+  --app-bg:
+    radial-gradient(circle at 12% 15%, #163455 0%, rgba(22, 52, 85, 0) 35%),
+    radial-gradient(circle at 88% 18%, #0d3f59 0%, rgba(13, 63, 89, 0) 38%),
+    radial-gradient(circle at 50% 120%, #10213b 0%, #081220 70%);
+  --app-text: #d7e9ff;
+  --app-title: #eaf4ff;
+  --app-card-bg: rgba(11, 29, 48, 0.88);
+  --app-header-bg: rgba(7, 19, 34, 0.92);
+  --app-border: #2a4c72;
+  --app-kpi-bg: linear-gradient(160deg, rgba(0, 166, 251, 0.18) 0%, rgba(11, 29, 48, 0.9) 70%);
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--app-bg);
+  color: var(--app-text);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.dashboard-content {
+  padding: 16px;
+  background: transparent;
+}
+
+.page-title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--app-title);
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+.ant-card {
+  background: var(--app-card-bg);
+  border-color: var(--app-border);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.kpi-grid .ant-card {
+  background: var(--app-kpi-bg);
+}
+
+[data-theme-mode='tech'] .ant-card .ant-typography,
+[data-theme-mode='tech'] .ant-card .ant-card-head-title,
+[data-theme-mode='tech'] .ant-table-wrapper,
+[data-theme-mode='tech'] .ant-tag,
+[data-theme-mode='tech'] .ant-select,
+[data-theme-mode='tech'] .ant-btn {
+  color: #d7e9ff;
+}
+
+[data-theme-mode='tech'] .ant-table-wrapper .ant-table,
+[data-theme-mode='tech'] .ant-table-wrapper .ant-table-container table > thead > tr > th,
+[data-theme-mode='tech'] .ant-table-wrapper .ant-table-tbody > tr > td {
+  background: rgba(7, 23, 37, 0.6);
+  border-color: #23425f;
+}
+
+@media (max-width: 1100px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,20 @@
+
+> dashboard-demo@0.1.0 dev C:\Users\Sansure\source\sansure-group-dashboardv1.0\dashboard-demo
+> vite "--host" "127.0.0.1" "--port" "5173"
+
+[2m12:13:43[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because lockfile has changed
+
+  [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m302[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m12:17:16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/sales/SalesPage.tsx[22m
+[2m12:18:26[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/sales/SalesPage.tsx[22m
+[2m12:34:18[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/line/LinePage.tsx[22m
+[2m12:35:04[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/line/LinePage.tsx[22m
+[2m12:35:11[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/login/LoginPage.tsx, /src/app/layout/AppLayout.tsx[22m
+[2m12:39:19[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/settings/SettingsPage.tsx, /src/pages/alerts/AlertsPage.tsx, /src/pages/production/ProductionPage.tsx, /src/pages/rd/RdPage.tsx, /src/pages/overview/OverviewPage.tsx, /src/pages/sales/SalesPage.tsx, /src/pages/line/LinePage.tsx[22m
+[2m12:56:34[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/sales/SalesPage.tsx[22m
+[2m12:57:46[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/sales/SalesPage.tsx[22m
+[2m13:19:28[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/settings/SettingsPage.tsx, /src/pages/alerts/AlertsPage.tsx, /src/pages/production/ProductionPage.tsx, /src/pages/rd/RdPage.tsx, /src/pages/overview/OverviewPage.tsx, /src/pages/line/LinePage.tsx, /src/pages/sales/SalesPage.tsx[22m
+^C ELIFECYCLE  Command failed with exit code 3221225786.

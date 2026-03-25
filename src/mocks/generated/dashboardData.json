@@ -1,0 +1,3559 @@
+{
+  "meta": {
+    "generatedAt": "2026-03-25T07:44:55.054Z",
+    "dataDir": "C:/Users/Sansure/Documents/驾驶舱数据",
+    "startMonth": "2024-01",
+    "latestMonth": "2026-03",
+    "sourceFiles": {
+      "group": "03集团-月报 (3).xlsx",
+      "domesticLine": "01国内产线-月报 (2).xlsx",
+      "domesticRegion": "02国内大区-月报.xlsx",
+      "domesticProvince": "03国内省区-月报.xlsx",
+      "international": "大国际-月报.xlsx",
+      "receivableStatFiles": [
+        "05回款数据统计表-填报_回款数据填报表.xlsx",
+        "05回款数据统计表-填报_回款数据填报表 (1).xlsx"
+      ],
+      "grossMarginFiles": [
+        "3-预测毛利率.xlsx",
+        "3-预测毛利率 (1).xlsx"
+      ],
+      "receivableDetail": "回款明细_回款明细.xlsx",
+      "ansai": "安赛销售情况-月报.xlsx",
+      "hongan": "红岸基元-月报.xlsx",
+      "haiji": "圣湘海济-月报.xlsx",
+      "shengweier": "圣维尔-月报.xlsx",
+      "rdProject": "研发项目信息.xlsx",
+      "division": "事业部（产线）业务信息.xlsx",
+      "hrOnJob": "在职员工统计.csv",
+      "hrResign": "本年度离职.csv",
+      "hrIntern": "实习生信息.csv",
+      "hrPersonnel": "人员信息.csv",
+      "hrAssignment": "人员任职信息.csv"
+    },
+    "note": "缺失时间和字段已按业务规则补齐 mock 数据。"
+  },
+  "overview": {
+    "kpis": {
+      "revenueRate": 22.16,
+      "profitRate": 11.75,
+      "operatingCashFlow": 125.3,
+      "collectionRate": 92,
+      "rdMilestoneRate": 98.57
+    },
+    "trend": [
+      {
+        "month": "2024-01",
+        "revenueRate": 16.09,
+        "profitRate": 8.17,
+        "operatingCashFlow": 76.91,
+        "collectionRate": 76.49,
+        "rdMilestoneRate": 89.23
+      },
+      {
+        "month": "2024-02",
+        "revenueRate": 15.13,
+        "profitRate": 8.84,
+        "operatingCashFlow": 60.54,
+        "collectionRate": 74.72,
+        "rdMilestoneRate": 90.16
+      },
+      {
+        "month": "2024-03",
+        "revenueRate": 15.12,
+        "profitRate": 8.55,
+        "operatingCashFlow": 61.57,
+        "collectionRate": 72.99,
+        "rdMilestoneRate": 91.38
+      },
+      {
+        "month": "2024-04",
+        "revenueRate": 15.2,
+        "profitRate": 8.2,
+        "operatingCashFlow": 80.74,
+        "collectionRate": 75.02,
+        "rdMilestoneRate": 88.41
+      },
+      {
+        "month": "2024-05",
+        "revenueRate": 16.34,
+        "profitRate": 8.78,
+        "operatingCashFlow": 83.64,
+        "collectionRate": 75.63,
+        "rdMilestoneRate": 89.2
+      },
+      {
+        "month": "2024-06",
+        "revenueRate": 17.82,
+        "profitRate": 9.54,
+        "operatingCashFlow": 65.09,
+        "collectionRate": 74.83,
+        "rdMilestoneRate": 91.88
+      },
+      {
+        "month": "2024-07",
+        "revenueRate": 17.91,
+        "profitRate": 9.12,
+        "operatingCashFlow": 68.09,
+        "collectionRate": 76.4,
+        "rdMilestoneRate": 93.37
+      },
+      {
+        "month": "2024-08",
+        "revenueRate": 18.47,
+        "profitRate": 9.73,
+        "operatingCashFlow": 83.57,
+        "collectionRate": 79.23,
+        "rdMilestoneRate": 89.88
+      },
+      {
+        "month": "2024-09",
+        "revenueRate": 17.52,
+        "profitRate": 9.65,
+        "operatingCashFlow": 75.81,
+        "collectionRate": 81.02,
+        "rdMilestoneRate": 91.41
+      },
+      {
+        "month": "2024-10",
+        "revenueRate": 18.6,
+        "profitRate": 9.96,
+        "operatingCashFlow": 87.67,
+        "collectionRate": 82.9,
+        "rdMilestoneRate": 90.04
+      },
+      {
+        "month": "2024-11",
+        "revenueRate": 19.19,
+        "profitRate": 9.75,
+        "operatingCashFlow": 80.44,
+        "collectionRate": 78.89,
+        "rdMilestoneRate": 95.03
+      },
+      {
+        "month": "2024-12",
+        "revenueRate": 18.79,
+        "profitRate": 9.21,
+        "operatingCashFlow": 81.51,
+        "collectionRate": 80.28,
+        "rdMilestoneRate": 92.94
+      },
+      {
+        "month": "2025-01",
+        "revenueRate": 18.02,
+        "profitRate": 9.73,
+        "operatingCashFlow": 99.31,
+        "collectionRate": 85.92,
+        "rdMilestoneRate": 92.4
+      },
+      {
+        "month": "2025-02",
+        "revenueRate": 18.82,
+        "profitRate": 9.7,
+        "operatingCashFlow": 83.55,
+        "collectionRate": 82.61,
+        "rdMilestoneRate": 95.51
+      },
+      {
+        "month": "2025-03",
+        "revenueRate": 19.63,
+        "profitRate": 10.65,
+        "operatingCashFlow": 86.61,
+        "collectionRate": 85.78,
+        "rdMilestoneRate": 92.5
+      },
+      {
+        "month": "2025-04",
+        "revenueRate": 19.32,
+        "profitRate": 10.11,
+        "operatingCashFlow": 110.25,
+        "collectionRate": 81.54,
+        "rdMilestoneRate": 93.13
+      },
+      {
+        "month": "2025-05",
+        "revenueRate": 18.23,
+        "profitRate": 10.52,
+        "operatingCashFlow": 106.3,
+        "collectionRate": 85.19,
+        "rdMilestoneRate": 97.01
+      },
+      {
+        "month": "2025-06",
+        "revenueRate": 20.17,
+        "profitRate": 11.05,
+        "operatingCashFlow": 112.06,
+        "collectionRate": 84.32,
+        "rdMilestoneRate": 93.6
+      },
+      {
+        "month": "2025-07",
+        "revenueRate": 19.5,
+        "profitRate": 10.44,
+        "operatingCashFlow": 99.67,
+        "collectionRate": 89.65,
+        "rdMilestoneRate": 93.73
+      },
+      {
+        "month": "2025-08",
+        "revenueRate": 21.17,
+        "profitRate": 11.37,
+        "operatingCashFlow": 120,
+        "collectionRate": 88.63,
+        "rdMilestoneRate": 94.24
+      },
+      {
+        "month": "2025-09",
+        "revenueRate": 19.7,
+        "profitRate": 11.15,
+        "operatingCashFlow": 106.43,
+        "collectionRate": 91.55,
+        "rdMilestoneRate": 98.08
+      },
+      {
+        "month": "2025-10",
+        "revenueRate": 20.42,
+        "profitRate": 10.49,
+        "operatingCashFlow": 104.26,
+        "collectionRate": 89.33,
+        "rdMilestoneRate": 97.04
+      },
+      {
+        "month": "2025-11",
+        "revenueRate": 22.27,
+        "profitRate": 11.16,
+        "operatingCashFlow": 118.52,
+        "collectionRate": 87.7,
+        "rdMilestoneRate": 97.84
+      },
+      {
+        "month": "2025-12",
+        "revenueRate": 22.11,
+        "profitRate": 11.3,
+        "operatingCashFlow": 113.81,
+        "collectionRate": 88.52,
+        "rdMilestoneRate": 95.85
+      },
+      {
+        "month": "2026-01",
+        "revenueRate": 20.92,
+        "profitRate": 11.91,
+        "operatingCashFlow": 127.07,
+        "collectionRate": 93.47,
+        "rdMilestoneRate": 99.62
+      },
+      {
+        "month": "2026-02",
+        "revenueRate": 21.35,
+        "profitRate": 11.44,
+        "operatingCashFlow": 116.07,
+        "collectionRate": 94.03,
+        "rdMilestoneRate": 100.19
+      },
+      {
+        "month": "2026-03",
+        "revenueRate": 22.16,
+        "profitRate": 11.75,
+        "operatingCashFlow": 125.3,
+        "collectionRate": 92,
+        "rdMilestoneRate": 98.57
+      }
+    ],
+    "contribution": [
+      {
+        "name": "国内营销",
+        "value": 2848.07
+      },
+      {
+        "name": "大国际",
+        "value": 278.15
+      },
+      {
+        "name": "圣维尔(湖南/上海)",
+        "value": 166.18
+      },
+      {
+        "name": "安赛",
+        "value": 42.94
+      },
+      {
+        "name": "海济",
+        "value": 1588.39
+      },
+      {
+        "name": "红岸基元",
+        "value": 237.74
+      },
+      {
+        "name": "合计(含海济、红岸)",
+        "value": 5161.47
+      }
+    ],
+    "anomalies": [
+      {
+        "module": "销售",
+        "org": "东北大区",
+        "metric": "月度达成率",
+        "value": 33.32,
+        "threshold": "< 90%",
+        "level": "红",
+        "reason": "目标达成明显偏离"
+      },
+      {
+        "module": "销售",
+        "org": "非公医疗",
+        "metric": "月度达成率",
+        "value": 31.37,
+        "threshold": "< 90%",
+        "level": "红",
+        "reason": "目标达成明显偏离"
+      },
+      {
+        "module": "销售",
+        "org": "湖南大区",
+        "metric": "月度达成率",
+        "value": 29.72,
+        "threshold": "< 90%",
+        "level": "红",
+        "reason": "目标达成明显偏离"
+      },
+      {
+        "module": "销售",
+        "org": "苏皖大区",
+        "metric": "月度达成率",
+        "value": 18.55,
+        "threshold": "< 90%",
+        "level": "红",
+        "reason": "目标达成明显偏离"
+      },
+      {
+        "module": "销售",
+        "org": "陕晋大区",
+        "metric": "月度达成率",
+        "value": 16.74,
+        "threshold": "< 90%",
+        "level": "红",
+        "reason": "目标达成明显偏离"
+      },
+      {
+        "module": "销售",
+        "org": "华南大区",
+        "metric": "月度达成率",
+        "value": 15.78,
+        "threshold": "< 90%",
+        "level": "红",
+        "reason": "目标达成明显偏离"
+      },
+      {
+        "module": "销售",
+        "org": "西北大区",
+        "metric": "月度达成率",
+        "value": 14.4,
+        "threshold": "< 90%",
+        "level": "红",
+        "reason": "目标达成明显偏离"
+      },
+      {
+        "module": "销售",
+        "org": "河南大区",
+        "metric": "月度达成率",
+        "value": 14.07,
+        "threshold": "< 90%",
+        "level": "红",
+        "reason": "目标达成明显偏离"
+      }
+    ],
+    "strategy": {
+      "northStar": {
+        "name": "经营性现金创造能力",
+        "description": "以经营性现金流和回款质量衡量增长质量与经营安全边界",
+        "unit": "分",
+        "current": 110.31,
+        "target": 100
+      },
+      "dimensions": [
+        {
+          "key": "growth",
+          "name": "增长",
+          "objective": "稳增长并优化结构贡献",
+          "weight": 30,
+          "kpis": [
+            {
+              "name": "营收达成率",
+              "unit": "%",
+              "current": 22.16,
+              "target": 102,
+              "route": "/sales#kpi-month-achieve"
+            },
+            {
+              "name": "销售达成率",
+              "unit": "%",
+              "current": 17.81,
+              "target": 101,
+              "route": "/sales#kpi-month-achieve"
+            }
+          ]
+        },
+        {
+          "key": "profit",
+          "name": "盈利",
+          "objective": "提升利润达成和毛利结构质量",
+          "weight": 25,
+          "kpis": [
+            {
+              "name": "利润达成率",
+              "unit": "%",
+              "current": 11.75,
+              "target": 14,
+              "route": "/finance#kpi-profit-rate"
+            },
+            {
+              "name": "毛利率",
+              "unit": "%",
+              "current": 16.32,
+              "target": 18,
+              "route": "/finance#kpi-gross-margin-rate"
+            }
+          ]
+        },
+        {
+          "key": "cash",
+          "name": "现金",
+          "objective": "保障现金安全线并提升回款效率",
+          "weight": 30,
+          "kpis": [
+            {
+              "name": "经营性现金流",
+              "unit": "百万元",
+              "current": 125.3,
+              "target": 130,
+              "route": "/finance#kpi-operating-cashflow"
+            },
+            {
+              "name": "回款达成率",
+              "unit": "%",
+              "current": 92,
+              "target": 95,
+              "route": "/finance#kpi-collection-rate"
+            }
+          ]
+        },
+        {
+          "key": "capability",
+          "name": "能力",
+          "objective": "强化研发交付与组织能力支撑",
+          "weight": 15,
+          "kpis": [
+            {
+              "name": "研发里程碑达成率",
+              "unit": "%",
+              "current": 98.57,
+              "target": 98,
+              "route": "/rd#kpi-milestone-rate"
+            },
+            {
+              "name": "关键人才占比",
+              "unit": "%",
+              "current": 76.04,
+              "target": 22,
+              "route": "/production#kpi-total-headcount"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sales": {
+    "domesticLines": [
+      {
+        "line": "呼吸道产线",
+        "category": "呼吸道产品",
+        "monthSales": 748.710518,
+        "monthTarget": 9000.0002,
+        "monthAchieveRate": 0.08319005570688764,
+        "ytdSales": 9529.702992,
+        "ytdTarget": 76700,
+        "ytdAchieveRate": 0.12424645361147328
+      },
+      {
+        "line": "妇幼产线",
+        "category": "妇幼产线",
+        "monthSales": 632.493564,
+        "monthTarget": 2999.9999,
+        "monthAchieveRate": 0.2108311950277065,
+        "ytdSales": 2806.316578,
+        "ytdTarget": 22000,
+        "ytdAchieveRate": 0.12755984445454546
+      },
+      {
+        "line": "肝炎产线",
+        "category": "肝炎产线",
+        "monthSales": 578.082,
+        "monthTarget": 2000.0001,
+        "monthAchieveRate": 0.2890409855479507,
+        "ytdSales": 2665.04896,
+        "ytdTarget": 15000,
+        "ytdAchieveRate": 0.17766993066666667
+      },
+      {
+        "line": "血筛产线",
+        "category": "临床血筛",
+        "monthSales": 66.20832,
+        "monthTarget": 300,
+        "monthAchieveRate": 0.2206944,
+        "ytdSales": 403.61248,
+        "ytdTarget": 4000,
+        "ytdAchieveRate": 0.10090312
+      },
+      {
+        "line": "测序产线",
+        "category": "测序试剂",
+        "monthSales": 193.447,
+        "monthTarget": 349.9999,
+        "monthAchieveRate": 0.5527058722016778,
+        "ytdSales": 872.9777,
+        "ytdTarget": 5200,
+        "ytdAchieveRate": 0.16788032692307692
+      },
+      {
+        "line": "仪器产线",
+        "category": "仪器产线",
+        "monthSales": 345.5313,
+        "monthTarget": 1299.9999,
+        "monthAchieveRate": 0.2657933281379483,
+        "ytdSales": 2376.15908,
+        "ytdTarget": 14999.9999,
+        "ytdAchieveRate": 0.15841060638940402
+      },
+      {
+        "line": "药物基因产线",
+        "category": "药物基因产品",
+        "monthSales": 44.09352,
+        "monthTarget": 39.9999,
+        "monthAchieveRate": 1.1023407558518896,
+        "ytdSales": 95.717,
+        "ytdTarget": 1400,
+        "ytdAchieveRate": 0.06836928571428572
+      },
+      {
+        "line": "其他产品",
+        "category": "其他产品",
+        "monthSales": 71.141816,
+        "monthTarget": 300,
+        "monthAchieveRate": 0.23713938666666667,
+        "ytdSales": 364.29888,
+        "ytdTarget": 4000,
+        "ytdAchieveRate": 0.09107472
+      },
+      {
+        "line": "营销管理部",
+        "category": "营销",
+        "monthSales": 0,
+        "monthTarget": 0,
+        "monthAchieveRate": null,
+        "ytdSales": 0,
+        "ytdTarget": 0,
+        "ytdAchieveRate": null
+      }
+    ],
+    "domesticRegions": [
+      {
+        "category": "大区",
+        "region": "东北大区",
+        "monthTarget": 1026.6532,
+        "monthSales": 342.09358,
+        "monthAchieveRate": 0.333212403175678,
+        "monthYoy": 1,
+        "ytdTarget": 585.411216,
+        "ytdSales": -0.41563541891551326,
+        "ytdAchieveRate": 8564.1666,
+        "ytdYoy": 0.15120816542732832
+      },
+      {
+        "category": "",
+        "region": "非公医疗",
+        "monthTarget": 1028.4554,
+        "monthSales": 322.648528,
+        "monthAchieveRate": 0.31372145841229476,
+        "monthYoy": 2,
+        "ytdTarget": 598.484046,
+        "ytdSales": -0.46089034426825815,
+        "ytdAchieveRate": 8593,
+        "ytdYoy": 0.15322134714302338
+      },
+      {
+        "category": "",
+        "region": "湖南大区",
+        "monthTarget": 1254.8683,
+        "monthSales": 372.960124,
+        "monthAchieveRate": 0.29721057102167614,
+        "monthYoy": 3,
+        "ytdTarget": 778.97294,
+        "ytdSales": -0.5212155585276171,
+        "ytdAchieveRate": 10346.3333,
+        "ytdYoy": 0.15787979911685232
+      },
+      {
+        "category": "",
+        "region": "苏皖大区",
+        "monthTarget": 1167.1244,
+        "monthSales": 216.5019,
+        "monthAchieveRate": 0.1855002774340079,
+        "monthYoy": 4,
+        "ytdTarget": 636.73508,
+        "ytdSales": -0.6599811965755051,
+        "ytdAchieveRate": 9709.5,
+        "ytdYoy": 0.15433102322467684
+      },
+      {
+        "category": "",
+        "region": "陕晋大区",
+        "monthTarget": 806.0186,
+        "monthSales": 134.9303,
+        "monthAchieveRate": 0.1674034569425569,
+        "monthYoy": 5,
+        "ytdTarget": 368.2714,
+        "ytdSales": -0.6336117873937537,
+        "ytdAchieveRate": 6771,
+        "ytdYoy": 0.1682332196130557
+      },
+      {
+        "category": "",
+        "region": "华南大区",
+        "monthTarget": 1340.5491,
+        "monthSales": 211.49563,
+        "monthAchieveRate": 0.15776791017949288,
+        "monthYoy": 6,
+        "ytdTarget": 393.109948,
+        "ytdSales": -0.4619936964810669,
+        "ytdAchieveRate": 11461.8334,
+        "ytdYoy": 0.12514974698550407
+      },
+      {
+        "category": "",
+        "region": "西北大区",
+        "monthTarget": 991.4494,
+        "monthSales": 142.81608,
+        "monthAchieveRate": 0.14404777490409496,
+        "monthYoy": 7,
+        "ytdTarget": 303.3274,
+        "ytdSales": -0.5291685485716094,
+        "ytdAchieveRate": 8129.3333,
+        "ytdYoy": 0.13362170056430087
+      },
+      {
+        "category": "",
+        "region": "河南大区",
+        "monthTarget": 993.8133,
+        "monthSales": 139.78414,
+        "monthAchieveRate": 0.1406543261194029,
+        "monthYoy": 8,
+        "ytdTarget": 458.48,
+        "ytdSales": -0.695113985342872,
+        "ytdAchieveRate": 8287.8333,
+        "ytdYoy": 0.16756314705316286
+      },
+      {
+        "category": "",
+        "region": "沪闽大区",
+        "monthTarget": 925.2969,
+        "monthSales": 116.388456,
+        "monthAchieveRate": 0.12578498425748535,
+        "monthYoy": 9,
+        "ytdTarget": 460.8135,
+        "ytdSales": -0.7474282849786302,
+        "ytdAchieveRate": 7818.1667,
+        "ytdYoy": 0.10386164009524125
+      },
+      {
+        "category": "",
+        "region": "渝贵大区",
+        "monthTarget": 966.0079,
+        "monthSales": 121.37294,
+        "monthAchieveRate": 0.12564383790236083,
+        "monthYoy": 10,
+        "ytdTarget": 248.93418,
+        "ytdSales": -0.5124295908259766,
+        "ytdAchieveRate": 8024.8333,
+        "ytdYoy": 0.14188694735876942
+      },
+      {
+        "category": "",
+        "region": "四川大区",
+        "monthTarget": 1604.7599,
+        "monthSales": 195.98648,
+        "monthAchieveRate": 0.12212822616018758,
+        "monthYoy": 11,
+        "ytdTarget": 662.90833,
+        "ytdSales": -0.7043535717826928,
+        "ytdAchieveRate": 13403.5,
+        "ytdYoy": 0.13017747864363785
+      },
+      {
+        "category": "",
+        "region": "京津大区",
+        "monthTarget": 634.6037,
+        "monthSales": 73.95525,
+        "monthAchieveRate": 0.11653769116064089,
+        "monthYoy": 12,
+        "ytdTarget": 286.72485,
+        "ytdSales": -0.7420689207789279,
+        "ytdAchieveRate": 5447.3333,
+        "ytdYoy": 0.10727571966268337
+      },
+      {
+        "category": "",
+        "region": "浙江大区",
+        "monthTarget": 548.7693,
+        "monthSales": 59.1059,
+        "monthAchieveRate": 0.10770628021647712,
+        "monthYoy": 13,
+        "ytdTarget": 1087.608,
+        "ytdSales": -0.9456551441328126,
+        "ytdAchieveRate": 4674.3333,
+        "ytdYoy": 0.13603744730826103
+      },
+      {
+        "category": "",
+        "region": "鲁冀大区",
+        "monthTarget": 1738.6113,
+        "monthSales": 173.51983,
+        "monthAchieveRate": 0.09980369390213903,
+        "monthYoy": 14,
+        "ytdTarget": 870.173716,
+        "ytdSales": -0.8005917360988182,
+        "ytdAchieveRate": 14900.3334,
+        "ytdYoy": 0.14144998728686164
+      },
+      {
+        "category": "",
+        "region": "云桂琼大区",
+        "monthTarget": 1163.5474,
+        "monthSales": 115.4479,
+        "monthAchieveRate": 0.09922062478932961,
+        "monthYoy": 15,
+        "ytdTarget": 696.40658,
+        "ytdSales": -0.834223421610979,
+        "ytdAchieveRate": 9857.5,
+        "ytdYoy": 0.1401378605123003
+      },
+      {
+        "category": "其他",
+        "region": "居家项目组",
+        "monthTarget": 478.6204,
+        "monthSales": 0.324,
+        "monthAchieveRate": 0.0006769456546356988,
+        "monthYoy": null,
+        "ytdTarget": 167.66424,
+        "ytdSales": -0.9980675664649779,
+        "ytdAchieveRate": 11721,
+        "ytdYoy": 0.07481410630492279
+      },
+      {
+        "category": "",
+        "region": "血站业务部",
+        "monthTarget": 200,
+        "monthSales": 90.6048,
+        "monthAchieveRate": 0.453024,
+        "monthYoy": null,
+        "ytdTarget": 221.0805,
+        "ytdSales": -0.5901728103564087,
+        "ytdAchieveRate": 3000,
+        "ytdYoy": 0.054685433400000004
+      },
+      {
+        "category": "",
+        "region": "创新业务部",
+        "monthTarget": 78.9047,
+        "monthSales": 30.69435,
+        "monthAchieveRate": 0.38900534442181517,
+        "monthYoy": null,
+        "ytdTarget": 54.92736,
+        "ytdSales": -0.4411828640590044,
+        "ytdAchieveRate": 882,
+        "ytdYoy": 0.6544509070294784
+      }
+    ],
+    "domesticProvinces": [
+      {
+        "category": "大省",
+        "region": "湖南",
+        "monthTarget": 1254.8683,
+        "monthSales": 372.960124,
+        "monthAchieveRate": 0.29721057102167614,
+        "monthYoy": 1,
+        "ytdTarget": 778.97294,
+        "ytdSales": -0.5212155585276171,
+        "ytdAchieveRate": 10346.3333,
+        "ytdYoy": 0.15787979911685232
+      },
+      {
+        "category": "",
+        "region": "陕西",
+        "monthTarget": 637.9124,
+        "monthSales": 113.0264,
+        "monthAchieveRate": 0.17718169453987725,
+        "monthYoy": 2,
+        "ytdTarget": 281.8592,
+        "ytdSales": -0.5989969459928929,
+        "ytdAchieveRate": 5369.8333,
+        "ytdYoy": 0.18490879968285048
+      },
+      {
+        "category": "",
+        "region": "江苏",
+        "monthTarget": 753.6428,
+        "monthSales": 128.8646,
+        "monthAchieveRate": 0.17098896187955356,
+        "monthYoy": 3,
+        "ytdTarget": 483.56788,
+        "ytdSales": -0.7335129041242359,
+        "ytdAchieveRate": 6311.6667,
+        "ytdYoy": 0.15366751859695
+      },
+      {
+        "category": "",
+        "region": "上海",
+        "monthTarget": 667.472,
+        "monthSales": 100.971456,
+        "monthAchieveRate": 0.15127444447107893,
+        "monthYoy": 4,
+        "ytdTarget": 332.5866,
+        "ytdSales": -0.6964055196451089,
+        "ytdAchieveRate": 5687.6667,
+        "ytdYoy": 0.12031050202009903
+      },
+      {
+        "category": "",
+        "region": "河南",
+        "monthTarget": 993.8133,
+        "monthSales": 139.78414,
+        "monthAchieveRate": 0.1406543261194029,
+        "monthYoy": 5,
+        "ytdTarget": 458.48,
+        "ytdSales": -0.695113985342872,
+        "ytdAchieveRate": 8287.8333,
+        "ytdYoy": 0.16756314705316286
+      },
+      {
+        "category": "",
+        "region": "河北",
+        "monthTarget": 717.6179,
+        "monthSales": 99.97058,
+        "monthAchieveRate": 0.13930892749470158,
+        "monthYoy": 6,
+        "ytdTarget": 219.492596,
+        "ytdSales": -0.5445378029972364,
+        "ytdAchieveRate": 5908.1667,
+        "ytdYoy": 0.15706618264511732
+      },
+      {
+        "category": "",
+        "region": "四川",
+        "monthTarget": 1132.4965,
+        "monthSales": 156.83512,
+        "monthAchieveRate": 0.13848618516701816,
+        "monthYoy": 7,
+        "ytdTarget": 534.576085,
+        "ytdSales": -0.7066177773365976,
+        "ytdAchieveRate": 9468.5,
+        "ytdYoy": 0.13058921423667952
+      },
+      {
+        "category": "",
+        "region": "山东",
+        "monthTarget": 1020.9934,
+        "monthSales": 73.54925,
+        "monthAchieveRate": 0.07203694950427691,
+        "monthYoy": 8,
+        "ytdTarget": 650.68112,
+        "ytdSales": -0.8869657536705537,
+        "ytdAchieveRate": 8992.1667,
+        "ytdYoy": 0.13118960305751448
+      },
+      {
+        "category": "",
+        "region": "广东",
+        "monthTarget": 1056.2571,
+        "monthSales": 69.98263,
+        "monthAchieveRate": 0.06625529901763501,
+        "monthYoy": 9,
+        "ytdTarget": 317.290348,
+        "ytdSales": -0.7794366250309007,
+        "ytdAchieveRate": 9037.6667,
+        "ytdYoy": 0.1025158683933321
+      },
+      {
+        "category": "中省",
+        "region": "辽宁",
+        "monthTarget": 382.5765,
+        "monthSales": 114.50674,
+        "monthAchieveRate": 0.2993041653107287,
+        "monthYoy": 1,
+        "ytdTarget": 267.96102,
+        "ytdSales": -0.5726738911502876,
+        "ytdAchieveRate": 3189.3333,
+        "ytdYoy": 0.194785794259885
+      },
+      {
+        "category": "",
+        "region": "安徽",
+        "monthTarget": 413.4816,
+        "monthSales": 87.6373,
+        "monthAchieveRate": 0.21194969739886851,
+        "monthYoy": 2,
+        "ytdTarget": 153.1672,
+        "ytdSales": -0.4278324602134139,
+        "ytdAchieveRate": 3397.8333,
+        "ytdYoy": 0.15556352043521382
+      },
+      {
+        "category": "",
+        "region": "贵州",
+        "monthTarget": 445.1805,
+        "monthSales": 67.60768,
+        "monthAchieveRate": 0.15186577129950662,
+        "monthYoy": 3,
+        "ytdTarget": 62.8694,
+        "ytdSales": 0.07536703070174045,
+        "ytdAchieveRate": 3664.5,
+        "ytdYoy": 0.20909740210124164
+      },
+      {
+        "category": "",
+        "region": "甘肃",
+        "monthTarget": 509.7909,
+        "monthSales": 64.25748,
+        "monthAchieveRate": 0.12604673798610372,
+        "monthYoy": 4,
+        "ytdTarget": 155.1778,
+        "ytdSales": -0.5859106135027046,
+        "ytdAchieveRate": 4201.5,
+        "ytdYoy": 0.11597316196596454
+      },
+      {
+        "category": "",
+        "region": "浙江",
+        "monthTarget": 548.7693,
+        "monthSales": 59.1059,
+        "monthAchieveRate": 0.10770628021647712,
+        "monthYoy": 5,
+        "ytdTarget": 1087.608,
+        "ytdSales": -0.9456551441328126,
+        "ytdAchieveRate": 4674.3333,
+        "ytdYoy": 0.13603744730826103
+      },
+      {
+        "category": "",
+        "region": "云南",
+        "monthTarget": 579.3716,
+        "monthSales": 61.4796,
+        "monthAchieveRate": 0.10611427967818927,
+        "monthYoy": 6,
+        "ytdTarget": 336.36498,
+        "ytdSales": -0.8172235409286662,
+        "ytdAchieveRate": 4862.8333,
+        "ytdYoy": 0.11921647817950083
+      },
+      {
+        "category": "",
+        "region": "北京",
+        "monthTarget": 436.0235,
+        "monthSales": 45.5314,
+        "monthAchieveRate": 0.10442418814582241,
+        "monthYoy": 7,
+        "ytdTarget": 214.76005,
+        "ytdSales": -0.7879894328577406,
+        "ytdAchieveRate": 3767.3333,
+        "ytdYoy": 0.1065762140026209
+      },
+      {
+        "category": "",
+        "region": "重庆",
+        "monthTarget": 520.8274,
+        "monthSales": 53.76526,
+        "monthAchieveRate": 0.1032304752015735,
+        "monthYoy": 8,
+        "ytdTarget": 186.06478,
+        "ytdSales": -0.7110401011948635,
+        "ytdAchieveRate": 4360.3333,
+        "ytdYoy": 0.08540211134777242
+      },
+      {
+        "category": "",
+        "region": "广西",
+        "monthTarget": 499.7023,
+        "monthSales": 46.772,
+        "monthAchieveRate": 0.0935997292788126,
+        "monthYoy": 9,
+        "ytdTarget": 307.3148,
+        "ytdSales": -0.8478042710601637,
+        "ytdAchieveRate": 4266.1667,
+        "ytdYoy": 0.14965160644097664
+      },
+      {
+        "category": "",
+        "region": "湖北",
+        "monthTarget": 409.1173,
+        "monthSales": 17.46176,
+        "monthAchieveRate": 0.042681548788085964,
+        "monthYoy": 10,
+        "ytdTarget": 105.553845,
+        "ytdSales": -0.8345701191652468,
+        "ytdAchieveRate": 3445.6667,
+        "ytdYoy": 0.12081042545409282
+      },
+      {
+        "category": "小省",
+        "region": "黑龙江",
+        "monthTarget": 239.6743,
+        "monthSales": 206.55384,
+        "monthAchieveRate": 0.8618105487321753,
+        "monthYoy": 1,
+        "ytdTarget": 176.725,
+        "ytdSales": 0.16878675908898022,
+        "ytdAchieveRate": 1992.8333,
+        "ytdYoy": 0.16070159004267945
+      },
+      {
+        "category": "",
+        "region": "江西",
+        "monthTarget": 284.292,
+        "monthSales": 141.513,
+        "monthAchieveRate": 0.4977734160651725,
+        "monthYoy": 2,
+        "ytdTarget": 75.8196,
+        "ytdSales": 0.8664435053732811,
+        "ytdAchieveRate": 2424.1667,
+        "ytdYoy": 0.20953233125428214
+      },
+      {
+        "category": "",
+        "region": "青海",
+        "monthTarget": 127.4912,
+        "monthSales": 55.739,
+        "monthAchieveRate": 0.437198802740895,
+        "monthYoy": 3,
+        "ytdTarget": 38.2672,
+        "ytdSales": 0.4565737759752475,
+        "ytdAchieveRate": 1049.5,
+        "ytdYoy": 0.13604373511195805
+      },
+      {
+        "category": "",
+        "region": "西藏",
+        "monthTarget": 63.1461,
+        "monthSales": 21.6896,
+        "monthAchieveRate": 0.34348281208182296,
+        "monthYoy": 4,
+        "ytdTarget": 22.7784,
+        "ytdSales": -0.04779966986267703,
+        "ytdAchieveRate": 489.3333,
+        "ytdYoy": 0.18816908638753993
+      },
+      {
+        "category": "",
+        "region": "天津",
+        "monthTarget": 198.5802,
+        "monthSales": 28.42385,
+        "monthAchieveRate": 0.14313536797727067,
+        "monthYoy": 5,
+        "ytdTarget": 71.9648,
+        "ytdSales": -0.6050312097025212,
+        "ytdAchieveRate": 1680,
+        "ytdYoy": 0.10884433333333332
+      },
+      {
+        "category": "",
+        "region": "山西",
+        "monthTarget": 168.1062,
+        "monthSales": 21.9039,
+        "monthAchieveRate": 0.13029799019905275,
+        "monthYoy": 6,
+        "ytdTarget": 86.4122,
+        "ytdSales": -0.7465184314251923,
+        "ytdAchieveRate": 1401.1667,
+        "ytdYoy": 0.1043257022879576
+      },
+      {
+        "category": "",
+        "region": "海南",
+        "monthTarget": 84.4735,
+        "monthSales": 7.1963,
+        "monthAchieveRate": 0.08519003000941124,
+        "monthYoy": 7,
+        "ytdTarget": 52.7268,
+        "ytdSales": -0.8635172246371864,
+        "ytdAchieveRate": 728.5,
+        "ytdYoy": 0.2240774193548387
+      },
+      {
+        "category": "",
+        "region": "新疆",
+        "monthTarget": 235.3537,
+        "monthSales": 18.208,
+        "monthAchieveRate": 0.07736440939743033,
+        "monthYoy": 8,
+        "ytdTarget": 74.9936,
+        "ytdSales": -0.7572059482409166,
+        "ytdAchieveRate": 1939.8333,
+        "ytdYoy": 0.1801586765213279
+      },
+      {
+        "category": "",
+        "region": "福建",
+        "monthTarget": 257.8249,
+        "monthSales": 15.417,
+        "monthAchieveRate": 0.05979639670179257,
+        "monthYoy": 9,
+        "ytdTarget": 128.2269,
+        "ytdSales": -0.8797678178291762,
+        "ytdAchieveRate": 2130.5,
+        "ytdYoy": 0.05994911053743253
+      },
+      {
+        "category": "",
+        "region": "内蒙古",
+        "monthTarget": 244.2249,
+        "monthSales": 14.47932,
+        "monthAchieveRate": 0.05928682947561858,
+        "monthYoy": 10,
+        "ytdTarget": 97.797396,
+        "ytdSales": -0.8519457511936208,
+        "ytdAchieveRate": 2025.6667,
+        "ytdYoy": 0.05765168573882367
+      },
+      {
+        "category": "",
+        "region": "吉林",
+        "monthTarget": 160.1775,
+        "monthSales": 6.55368,
+        "monthAchieveRate": 0.04091510980006555,
+        "monthYoy": 11,
+        "ytdTarget": 42.9278,
+        "ytdSales": -0.8473324978219242,
+        "ytdAchieveRate": 1356.3333,
+        "ytdYoy": 0.17451501043290762
+      },
+      {
+        "category": "",
+        "region": "宁夏",
+        "monthTarget": 118.8136,
+        "monthSales": 4.6116,
+        "monthAchieveRate": 0.03881373849458312,
+        "monthYoy": 12,
+        "ytdTarget": 34.8888,
+        "ytdSales": -0.8678200454013896,
+        "ytdAchieveRate": 938.5,
+        "ytdYoy": 0.11373297815663293
+      }
+    ],
+    "internationalRegions": [
+      {
+        "group": "国际营销",
+        "region": "中东非洲区域",
+        "monthSales": 42.69422987,
+        "monthTarget": 130.0164,
+        "monthAchieveRate": 0.3283757269852111,
+        "monthYoy": -0.6227691341741486,
+        "ytdSales": 256.29644888,
+        "ytdTarget": 1679.9999,
+        "ytdAchieveRate": 0.1525574191284178,
+        "ytdYoy": -0.13229298955368393
+      },
+      {
+        "group": "",
+        "region": "泰越区域",
+        "monthSales": 31.94733732,
+        "monthTarget": 141.9252,
+        "monthAchieveRate": 0.22509982244168056,
+        "monthYoy": -0.8132457852131113,
+        "ytdSales": 211.96041535999998,
+        "ytdTarget": 1800,
+        "ytdAchieveRate": 0.1177557863111111,
+        "ytdYoy": -0.2510102168599977
+      },
+      {
+        "group": "",
+        "region": "东南亚南亚",
+        "monthSales": 30.3601886,
+        "monthTarget": 86.0822,
+        "monthAchieveRate": 0.3526883443964025,
+        "monthYoy": -0.4925913032017645,
+        "ytdSales": 99.64199218,
+        "ytdTarget": 1099.9999,
+        "ytdAchieveRate": 0.0905836374894216,
+        "ytdYoy": -0.25797898631324606
+      },
+      {
+        "group": "",
+        "region": "印菲区域",
+        "monthSales": 1.5219083500000001,
+        "monthTarget": 55.2007,
+        "monthAchieveRate": 0.027570453816708848,
+        "monthYoy": -0.9807682746559927,
+        "ytdSales": 38.79851524,
+        "ytdTarget": 699.9999,
+        "ytdAchieveRate": 0.05542645826092261,
+        "ytdYoy": -0.7644423603225743
+      },
+      {
+        "group": "",
+        "region": "小计",
+        "monthSales": 106.52366414000001,
+        "monthTarget": 413.2245,
+        "monthAchieveRate": 0.2577864191014812,
+        "monthYoy": -0.7482979295652841,
+        "ytdSales": 606.69737166,
+        "ytdTarget": 5279.9997,
+        "ytdAchieveRate": 0.11490481176731886,
+        "ytdYoy": -0.3084974418831065
+      },
+      {
+        "group": "法国分公司",
+        "region": "西欧区域",
+        "monthSales": 106.01279704,
+        "monthTarget": 200.014,
+        "monthAchieveRate": 0.5300268833181677,
+        "monthYoy": -0.13675806311065403,
+        "ytdSales": 437.96845071,
+        "ytdTarget": 2500,
+        "ytdAchieveRate": 0.175187380284,
+        "ytdYoy": 0.03148343020817817
+      },
+      {
+        "group": "",
+        "region": "独联体区域",
+        "monthSales": 16.73222892,
+        "monthTarget": 87.1718,
+        "monthAchieveRate": 0.19194543327085134,
+        "monthYoy": -0.738038984743833,
+        "ytdSales": 130.30061573,
+        "ytdTarget": 1099.9999,
+        "ytdAchieveRate": 0.11845511597773782,
+        "ytdYoy": -0.09016375151718944
+      },
+      {
+        "group": "",
+        "region": "小计",
+        "monthSales": 122.74502595999999,
+        "monthTarget": 287.1858,
+        "monthAchieveRate": 0.42740632008964236,
+        "monthYoy": -0.34248686174647835,
+        "ytdSales": 568.26906644,
+        "ytdTarget": 3599.9999,
+        "ytdAchieveRate": 0.15785252284034784,
+        "ytdYoy": 0.0008017372892552565
+      },
+      {
+        "group": "美分&拉美",
+        "region": "美分",
+        "monthSales": 20.32014276,
+        "monthTarget": 128.345,
+        "monthAchieveRate": 0.15832438162764423,
+        "monthYoy": -0.8599688006615469,
+        "ytdSales": 153.914451974,
+        "ytdTarget": 2918,
+        "ytdAchieveRate": 0.05274655653666895,
+        "ytdYoy": -0.539527911000777
+      },
+      {
+        "group": "",
+        "region": "拉丁美洲",
+        "monthSales": 28.55924844,
+        "monthTarget": 112,
+        "monthAchieveRate": 0.25499328964285717,
+        "monthYoy": -0.8871503713323038,
+        "ytdSales": 85.72639266,
+        "ytdTarget": 1200,
+        "ytdAchieveRate": 0.07143866055,
+        "ytdYoy": -0.7248556925524932
+      },
+      {
+        "group": "",
+        "region": "小计",
+        "monthSales": 48.8793912,
+        "monthTarget": 240.345,
+        "monthAchieveRate": 0.20337178306184858,
+        "monthYoy": -0.8772445252138962,
+        "ytdSales": 239.64084463400002,
+        "ytdTarget": 4118,
+        "ytdAchieveRate": 0.058193502825157846,
+        "ytdYoy": -0.6289369476217459
+      }
+    ],
+    "regionMappings": [
+      {
+        "region": "西欧区域",
+        "regionGroup": "法国分公司",
+        "effectiveFrom": "2025-01-01"
+      },
+      {
+        "region": "独联体区域",
+        "regionGroup": "法国分公司",
+        "effectiveFrom": "2025-01-01"
+      },
+      {
+        "region": "中东非洲区域",
+        "regionGroup": "大国际-中东非",
+        "effectiveFrom": "2025-01-01"
+      },
+      {
+        "region": "泰越区域",
+        "regionGroup": "大国际-泰越",
+        "effectiveFrom": "2025-01-01"
+      }
+    ],
+    "subsidiaries": [
+      {
+        "company": "安赛",
+        "monthSales": 42.942075,
+        "monthTarget": 60,
+        "ytdSales": 95.337975,
+        "ytdTarget": 1538.9
+      },
+      {
+        "company": "红岸基元",
+        "monthSales": 237.741356,
+        "monthTarget": 669.111,
+        "ytdSales": 0,
+        "ytdTarget": 803.78948046
+      },
+      {
+        "company": "海济",
+        "monthSales": 1588.3858,
+        "monthTarget": 4135.82,
+        "ytdSales": 5340.9713,
+        "ytdTarget": -0.702603569504296
+      },
+      {
+        "company": "圣维尔",
+        "monthSales": 166.1847,
+        "monthTarget": 432,
+        "ytdSales": 634.877963,
+        "ytdTarget": 5400
+      }
+    ],
+    "grossMargins": [
+      {
+        "scope": "境内",
+        "category": "安赛",
+        "income": 373460.7439,
+        "cost": 287010.369,
+        "predictedGrossMargin": 0.2314845035577513,
+        "actualIncome": 0.2314845035577513,
+        "actualCost": 90219.7221,
+        "actualGrossMargin": 0.0010180649481160912,
+        "deviation": -0.06893712101114982
+      },
+      {
+        "scope": "境内",
+        "category": "测序-试剂",
+        "income": 2538709.3803,
+        "cost": 2144553.1804,
+        "predictedGrossMargin": 0.15525849589503718,
+        "actualIncome": 0.15525849589503718,
+        "actualCost": 1903712.7441,
+        "actualGrossMargin": 0.02148203486929282,
+        "deviation": 0.18986105725256097
+      },
+      {
+        "scope": "境内",
+        "category": "测序-仪器",
+        "income": 3539823.0088,
+        "cost": 3244120.2938,
+        "predictedGrossMargin": 0.08353601698866946,
+        "actualIncome": 0.08353601698866946,
+        "actualCost": 1814159.2919,
+        "actualGrossMargin": 0.020471488299812643,
+        "deviation": 0.09117659840485368
+      },
+      {
+        "scope": "境内",
+        "category": "妇幼产线",
+        "income": 12087758.5089,
+        "cost": 2446470.0919,
+        "predictedGrossMargin": 0.7976076300582355,
+        "actualIncome": 0.7976076300582355,
+        "actualCost": 6059123.0489,
+        "actualGrossMargin": 0.0683728640348737,
+        "deviation": 0.844464149004023
+      },
+      {
+        "scope": "境内",
+        "category": "肝炎产线",
+        "income": 10168496.8202,
+        "cost": 911365.409,
+        "predictedGrossMargin": 0.9103736348533298,
+        "actualIncome": 0.9103736348533298,
+        "actualCost": 5308232.393,
+        "actualGrossMargin": 0.05989960077440429,
+        "deviation": 0.8977575110472372
+      },
+      {
+        "scope": "境内",
+        "category": "海济",
+        "income": 47513926.49,
+        "cost": 5814305.58,
+        "predictedGrossMargin": 0.8776294444698503,
+        "actualIncome": 0.8776294444698503,
+        "actualCost": 30871575.1,
+        "actualGrossMargin": 0.3483636146385726,
+        "deviation": 0.8730611056511982
+      },
+      {
+        "scope": "境内",
+        "category": "红岸",
+        "income": 2218743.3626,
+        "cost": 2056520.9341,
+        "predictedGrossMargin": 0.07311455269432438,
+        "actualIncome": 0.07311455269432438,
+        "actualCost": 1483639.3806,
+        "actualGrossMargin": 0.016741807820681912,
+        "deviation": 0.2372464578674449
+      },
+      {
+        "scope": "境内",
+        "category": "呼吸道产线",
+        "income": 53710609.2229,
+        "cost": 9779093.3417,
+        "predictedGrossMargin": 0.8179299493491763,
+        "actualIncome": 0.8179299493491763,
+        "actualCost": 23581557.949,
+        "actualGrossMargin": 0.2661009922335516,
+        "deviation": 0.9447931727574765
+      },
+      {
+        "scope": "境内",
+        "category": "其他",
+        "income": 8238292.8922,
+        "cost": 4887668.8567,
+        "predictedGrossMargin": 0.4067133906676666,
+        "actualIncome": 0.4067133906676666,
+        "actualCost": 4305557.825,
+        "actualGrossMargin": 0.0485851363946892,
+        "deviation": 0.05811553300878042
+      },
+      {
+        "scope": "境内",
+        "category": "血筛产线",
+        "income": 4242987.1315,
+        "cost": 663062.0957,
+        "predictedGrossMargin": 0.8437275261154066,
+        "actualIncome": 0.8437275261154066,
+        "actualCost": 2229374.0238,
+        "actualGrossMargin": 0.025156889170591987,
+        "deviation": 0.8892949203833815
+      },
+      {
+        "scope": "境内",
+        "category": "药物基因产线",
+        "income": 268283.894,
+        "cost": 34443.7622,
+        "predictedGrossMargin": 0.8716144987816525,
+        "actualIncome": 0.8716144987816525,
+        "actualCost": 183313.2742,
+        "actualGrossMargin": 0.0020685590095318395,
+        "deviation": 0.8635257942493288
+      },
+      {
+        "scope": "境内",
+        "category": "仪器-其他",
+        "income": 9658805.3098,
+        "cost": 11349388.2002,
+        "predictedGrossMargin": -0.17503022746350458,
+        "actualIncome": -0.17503022746350458,
+        "actualCost": 7228637.1681,
+        "actualGrossMargin": 0.08156999325862227,
+        "deviation": 0.03230597618463421
+      },
+      {
+        "scope": "境外",
+        "category": "国际试剂",
+        "income": 2665247.3784,
+        "cost": -506091.3976,
+        "predictedGrossMargin": 1.1898853373617486,
+        "actualIncome": 1.1898853373617486,
+        "actualCost": 2351371.7774,
+        "actualGrossMargin": 0.026533546444612383,
+        "deviation": 1.0458397916212057
+      },
+      {
+        "scope": "境外",
+        "category": "国际仪器及其他",
+        "income": 1574886.4281,
+        "cost": 1241792.0805,
+        "predictedGrossMargin": 0.211503726019061,
+        "actualIncome": 0.211503726019061,
+        "actualCost": 309816.4658,
+        "actualGrossMargin": 0.0034960569245666936,
+        "deviation": 0.531498258734575
+      },
+      {
+        "scope": "境外",
+        "category": "红岸",
+        "income": 670522.922,
+        "cost": 263936.7938,
+        "predictedGrossMargin": 0.6063717061114877,
+        "actualIncome": 0.6063717061114877,
+        "actualCost": 776665.7626,
+        "actualGrossMargin": 0.008764116879328245,
+        "deviation": 0.6003072488211675
+      },
+      {
+        "scope": "境内",
+        "category": "境内",
+        "income": -1912819.19,
+        "cost": -11765.13,
+        "predictedGrossMargin": 0.9938493245668453,
+        "actualIncome": 0.9938493245668453,
+        "actualCost": 77079.63,
+        "actualGrossMargin": 0.00048311359116363185,
+        "deviation": 0.6762636250329692
+      },
+      {
+        "scope": "境内",
+        "category": "仪器-其他",
+        "income": 4758407.0808,
+        "cost": 4579495.7919,
+        "predictedGrossMargin": 0.03759898761539353,
+        "actualIncome": 0.03759898761539353,
+        "actualCost": 9658805.3098,
+        "actualGrossMargin": 0.06053869381012641,
+        "deviation": -0.17503022746350458
+      },
+      {
+        "scope": "境内",
+        "category": "其他",
+        "income": 15480072.1037,
+        "cost": 6968020.7029,
+        "predictedGrossMargin": 0.5498715602729961,
+        "actualIncome": 0.5498715602729961,
+        "actualCost": 8238292.8922,
+        "actualGrossMargin": 0.05163531875034383,
+        "deviation": 0.4067133906676666
+      },
+      {
+        "scope": "境内",
+        "category": "呼吸道产线",
+        "income": 133590061.9438,
+        "cost": 19315319.9365,
+        "predictedGrossMargin": 0.855413496666947,
+        "actualIncome": 0.855413496666947,
+        "actualCost": 53710609.2229,
+        "actualGrossMargin": 0.3366430963052327,
+        "deviation": 0.8179299493491763
+      },
+      {
+        "scope": "境内",
+        "category": "妇幼产线",
+        "income": 11187985.6458,
+        "cost": 2074966.6743,
+        "predictedGrossMargin": 0.8145361694239438,
+        "actualIncome": 0.8145361694239438,
+        "actualCost": 12087758.5089,
+        "actualGrossMargin": 0.07576269401336548,
+        "deviation": 0.7976076300582355
+      },
+      {
+        "scope": "境内",
+        "category": "安赛",
+        "income": 131387.3006,
+        "cost": 110378.018,
+        "predictedGrossMargin": 0.15990344960325636,
+        "actualIncome": 0.15990344960325636,
+        "actualCost": 373460.7439,
+        "actualGrossMargin": 0.0023407476287077454,
+        "deviation": 0.2314845035577513
+      },
+      {
+        "scope": "境内",
+        "category": "测序-仪器",
+        "income": 1270796.4602,
+        "cost": -2614227.3402,
+        "predictedGrossMargin": 3.0571566116800235,
+        "actualIncome": 3.0571566116800235,
+        "actualCost": 3539823.0088,
+        "actualGrossMargin": 0.02218662188525062,
+        "deviation": 0.08353601698866946
+      },
+      {
+        "scope": "境内",
+        "category": "测序-试剂",
+        "income": 2631124.7585,
+        "cost": -392473.8293,
+        "predictedGrossMargin": 1.1491657999234322,
+        "actualIncome": 1.1491657999234322,
+        "actualCost": 2538709.3803,
+        "actualGrossMargin": 0.01591192129019731,
+        "deviation": 0.15525849589503718
+      },
+      {
+        "scope": "境内",
+        "category": "海济",
+        "income": 37490697.6,
+        "cost": 4521097.13,
+        "predictedGrossMargin": 0.8794074952075579,
+        "actualIncome": 0.8794074952075579,
+        "actualCost": 47513926.49,
+        "actualGrossMargin": 0.29780401977628485,
+        "deviation": 0.8776294444698503
+      },
+      {
+        "scope": "境内",
+        "category": "红岸",
+        "income": 6686584.9538,
+        "cost": 4694591.3911,
+        "predictedGrossMargin": 0.29790895897732467,
+        "actualIncome": 0.29790895897732467,
+        "actualCost": 2218743.3626,
+        "actualGrossMargin": 0.01390646366330713,
+        "deviation": 0.07311455269432438
+      },
+      {
+        "scope": "境内",
+        "category": "肝炎产线",
+        "income": 8582347.1819,
+        "cost": 852978.4708,
+        "predictedGrossMargin": 0.9006124487018056,
+        "actualIncome": 0.9006124487018056,
+        "actualCost": 10168496.8202,
+        "actualGrossMargin": 0.06373329783164233,
+        "deviation": 0.9103736348533298
+      },
+      {
+        "scope": "境内",
+        "category": "药物基因产线",
+        "income": 485358.5837,
+        "cost": 34914.6071,
+        "predictedGrossMargin": 0.9280643048818917,
+        "actualIncome": 0.9280643048818917,
+        "actualCost": 268283.894,
+        "actualGrossMargin": 0.001681528511251327,
+        "deviation": 0.8716144987816525
+      },
+      {
+        "scope": "境内",
+        "category": "血筛产线",
+        "income": 5244542.9452,
+        "cost": 809127.8688,
+        "predictedGrossMargin": 0.8457200413354334,
+        "actualIncome": 0.8457200413354334,
+        "actualCost": 4242987.1315,
+        "actualGrossMargin": 0.026593858200409652,
+        "deviation": 0.8437275261154066
+      },
+      {
+        "scope": "境外",
+        "category": "国际仪器及其他",
+        "income": 1757781.0089,
+        "cost": 368708.7717,
+        "predictedGrossMargin": 0.7902419187412124,
+        "actualIncome": 0.7902419187412124,
+        "actualCost": 1574886.4281,
+        "actualGrossMargin": 0.0098709482382603,
+        "deviation": 0.211503726019061
+      },
+      {
+        "scope": "境外",
+        "category": "国际试剂",
+        "income": 8102801.9681,
+        "cost": 1965369.9622,
+        "predictedGrossMargin": 0.7574456379487634,
+        "actualIncome": 0.7574456379487634,
+        "actualCost": 2665247.3784,
+        "actualGrossMargin": 0.016705026118032467,
+        "deviation": 1.1898853373617486
+      },
+      {
+        "scope": "境外",
+        "category": "红岸",
+        "income": 184971.657,
+        "cost": 72945.564,
+        "predictedGrossMargin": 0.605639235853307,
+        "actualIncome": 0.605639235853307,
+        "actualCost": 670522.922,
+        "actualGrossMargin": 0.004202650386424426,
+        "deviation": 0.6063717061114877
+      }
+    ],
+    "receivableStat": [
+      {
+        "department": "香港圣湘(国际)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": -1,
+        "ytdAmount": 5.762644,
+        "ytdYoyGrowth": 0.16488873543849664
+      },
+      {
+        "department": "湖南圣维尔",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": -1,
+        "yoyGrowth": -1.0028069850419277,
+        "ytdAmount": 907.699752,
+        "ytdYoyGrowth": -0.38455747758180503
+      },
+      {
+        "department": "北京圣维尔",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": -1,
+        "ytdAmount": 2.413,
+        "ytdYoyGrowth": -0.9939865862295362
+      },
+      {
+        "department": "上海钧济",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": -1,
+        "yoyGrowth": -1.0061270692399509,
+        "ytdAmount": 165.932153,
+        "ytdYoyGrowth": -0.4364281066967921
+      },
+      {
+        "department": "徐州圣维尔",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": null,
+        "ytdAmount": 0,
+        "ytdYoyGrowth": null
+      },
+      {
+        "department": "贵阳圣维尔",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": -1,
+        "ytdAmount": 0,
+        "ytdYoyGrowth": -1
+      },
+      {
+        "department": "上海圣湘(国内)",
+        "systemAmount": 129.56775,
+        "manualAmount": null,
+        "totalAmount": 129.56775,
+        "momGrowth": 0.1273730976281857,
+        "yoyGrowth": -0.9932925519158607,
+        "ytdAmount": 1542.03819,
+        "ytdYoyGrowth": 9.948600999407853
+      },
+      {
+        "department": "上海圣湘(国外)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": null,
+        "ytdAmount": 0,
+        "ytdYoyGrowth": null
+      },
+      {
+        "department": "圣维基因(国内)",
+        "systemAmount": 83.93792,
+        "manualAmount": null,
+        "totalAmount": 83.93792,
+        "momGrowth": -0.1438646822262423,
+        "yoyGrowth": -1.0004324337291968,
+        "ytdAmount": 359.945219,
+        "ytdYoyGrowth": -0.3957175861260354
+      },
+      {
+        "department": "圣维基因(国际)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": -1,
+        "yoyGrowth": null,
+        "ytdAmount": 11.918297,
+        "ytdYoyGrowth": null
+      },
+      {
+        "department": "上海数智(国内)",
+        "systemAmount": 222.279,
+        "manualAmount": null,
+        "totalAmount": 222.279,
+        "momGrowth": -0.0937210339454943,
+        "yoyGrowth": -1.0012888973138299,
+        "ytdAmount": 1231.54176,
+        "ytdYoyGrowth": 3.722524238784817
+      },
+      {
+        "department": "成都数智(国内)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": -1,
+        "ytdAmount": 0,
+        "ytdYoyGrowth": -1
+      },
+      {
+        "department": "圣湘(国内)",
+        "systemAmount": 4545.389394,
+        "manualAmount": null,
+        "totalAmount": 4545.389394,
+        "momGrowth": -0.09340544976122558,
+        "yoyGrowth": -1.0000125932593606,
+        "ytdAmount": 17603.981245,
+        "ytdYoyGrowth": -0.27725159154840834
+      },
+      {
+        "department": "圣湘(国际)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": -1,
+        "yoyGrowth": -1.0024801886498949,
+        "ytdAmount": 910.433582,
+        "ytdYoyGrowth": -0.22023888806631392
+      },
+      {
+        "department": "合计",
+        "systemAmount": 4981.174064,
+        "manualAmount": null,
+        "totalAmount": 4981.174064,
+        "momGrowth": -0.21693137868167303,
+        "yoyGrowth": -1.000024148298757,
+        "ytdAmount": 22741.665842,
+        "ytdYoyGrowth": -0.21293133287937613
+      },
+      {
+        "department": "香港圣湘(国际)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": -1,
+        "ytdAmount": 5.762644,
+        "ytdYoyGrowth": 0.16488873543849664
+      },
+      {
+        "department": "湖南圣维尔",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": -1,
+        "yoyGrowth": -1.0028069850419277,
+        "ytdAmount": 907.699752,
+        "ytdYoyGrowth": -0.38455747758180503
+      },
+      {
+        "department": "北京圣维尔",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": -1,
+        "ytdAmount": 2.413,
+        "ytdYoyGrowth": -0.9939865862295362
+      },
+      {
+        "department": "上海钧济",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": -1,
+        "yoyGrowth": -1.0061270692399509,
+        "ytdAmount": 165.932153,
+        "ytdYoyGrowth": -0.4364281066967921
+      },
+      {
+        "department": "徐州圣维尔",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": null,
+        "ytdAmount": 0,
+        "ytdYoyGrowth": null
+      },
+      {
+        "department": "贵阳圣维尔",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": -1,
+        "ytdAmount": 0,
+        "ytdYoyGrowth": -1
+      },
+      {
+        "department": "上海圣湘(国内)",
+        "systemAmount": 129.56775,
+        "manualAmount": null,
+        "totalAmount": 129.56775,
+        "momGrowth": 0.1273730976281857,
+        "yoyGrowth": -0.9932925519158607,
+        "ytdAmount": 1542.03819,
+        "ytdYoyGrowth": 9.948600999407853
+      },
+      {
+        "department": "上海圣湘(国外)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": null,
+        "ytdAmount": 0,
+        "ytdYoyGrowth": null
+      },
+      {
+        "department": "圣维基因(国内)",
+        "systemAmount": 83.93792,
+        "manualAmount": null,
+        "totalAmount": 83.93792,
+        "momGrowth": -0.1438646822262423,
+        "yoyGrowth": -1.0004324337291968,
+        "ytdAmount": 359.945219,
+        "ytdYoyGrowth": -0.3957175861260354
+      },
+      {
+        "department": "圣维基因(国际)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": -1,
+        "yoyGrowth": null,
+        "ytdAmount": 11.918297,
+        "ytdYoyGrowth": null
+      },
+      {
+        "department": "上海数智(国内)",
+        "systemAmount": 222.279,
+        "manualAmount": null,
+        "totalAmount": 222.279,
+        "momGrowth": -0.0937210339454943,
+        "yoyGrowth": -1.0012888973138299,
+        "ytdAmount": 1231.54176,
+        "ytdYoyGrowth": 3.722524238784817
+      },
+      {
+        "department": "成都数智(国内)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": null,
+        "yoyGrowth": -1,
+        "ytdAmount": 0,
+        "ytdYoyGrowth": -1
+      },
+      {
+        "department": "圣湘(国内)",
+        "systemAmount": 4545.389394,
+        "manualAmount": null,
+        "totalAmount": 4545.389394,
+        "momGrowth": -0.09340544976122558,
+        "yoyGrowth": -1.0000125932593606,
+        "ytdAmount": 17603.981245,
+        "ytdYoyGrowth": -0.27725159154840834
+      },
+      {
+        "department": "圣湘(国际)",
+        "systemAmount": 0,
+        "manualAmount": null,
+        "totalAmount": 0,
+        "momGrowth": -1,
+        "yoyGrowth": -1.0024801886498949,
+        "ytdAmount": 910.433582,
+        "ytdYoyGrowth": -0.22023888806631392
+      },
+      {
+        "department": "合计",
+        "systemAmount": 4981.174064,
+        "manualAmount": null,
+        "totalAmount": 4981.174064,
+        "momGrowth": -0.21693137868167303,
+        "yoyGrowth": -1.000024148298757,
+        "ytdAmount": 22741.665842,
+        "ytdYoyGrowth": -0.21293133287937613
+      }
+    ],
+    "receivableMonthly": [
+      {
+        "month": "2024-01",
+        "amount": 806737081.19
+      },
+      {
+        "month": "2024-02",
+        "amount": 840141055.08
+      },
+      {
+        "month": "2024-03",
+        "amount": 929471486.28
+      },
+      {
+        "month": "2024-04",
+        "amount": 888620420.21
+      },
+      {
+        "month": "2024-05",
+        "amount": 974151330.41
+      },
+      {
+        "month": "2024-06",
+        "amount": 973950465.31
+      },
+      {
+        "month": "2024-07",
+        "amount": 945080373.52
+      },
+      {
+        "month": "2024-08",
+        "amount": 968338546.86
+      },
+      {
+        "month": "2024-09",
+        "amount": 972660309.03
+      },
+      {
+        "month": "2024-10",
+        "amount": 943659258.95
+      },
+      {
+        "month": "2024-11",
+        "amount": 1018198829.7
+      },
+      {
+        "month": "2024-12",
+        "amount": 1096742910
+      },
+      {
+        "month": "2025-01",
+        "amount": 1016968596.78
+      },
+      {
+        "month": "2025-02",
+        "amount": 1041544359.11
+      },
+      {
+        "month": "2025-03",
+        "amount": 1029209456.83
+      },
+      {
+        "month": "2025-04",
+        "amount": 1150051282.98
+      },
+      {
+        "month": "2025-05",
+        "amount": 1085129418.06
+      },
+      {
+        "month": "2025-06",
+        "amount": 1129576920.73
+      },
+      {
+        "month": "2025-07",
+        "amount": 1164916044.7
+      },
+      {
+        "month": "2025-08",
+        "amount": 1154268224.93
+      },
+      {
+        "month": "2025-09",
+        "amount": 1209752909.62
+      },
+      {
+        "month": "2025-10",
+        "amount": 1232129016.94
+      },
+      {
+        "month": "2025-11",
+        "amount": 1266097222.22
+      },
+      {
+        "month": "2025-12",
+        "amount": 1153680694.92
+      },
+      {
+        "month": "2026-01",
+        "amount": 1178984628.9
+      },
+      {
+        "month": "2026-02",
+        "amount": 726879000
+      },
+      {
+        "month": "2026-03",
+        "amount": 1253040000
+      }
+    ]
+  },
+  "finance": {
+    "kpis": {
+      "revenue": 1362000000,
+      "cost": 1139694133.2,
+      "grossProfit": 222305866.8,
+      "grossMarginRate": 16.32,
+      "profitRate": 11.75,
+      "operatingCashFlow": 125.3,
+      "collectionRate": 92
+    },
+    "monthly": [
+      {
+        "month": "2024-01",
+        "revenue": 921879877.95,
+        "cost": 827021398.3,
+        "grossProfit": 94858479.65,
+        "grossMarginRate": 10.29,
+        "receivable": 806737081.19,
+        "collectionRate": 87.51,
+        "operatingCashFlow": 80.67
+      },
+      {
+        "month": "2024-02",
+        "revenue": 968127512.19,
+        "cost": 820455812.9,
+        "grossProfit": 147671699.29,
+        "grossMarginRate": 15.25,
+        "receivable": 840141055.08,
+        "collectionRate": 86.78,
+        "operatingCashFlow": 84.01
+      },
+      {
+        "month": "2024-03",
+        "revenue": 1048828127.15,
+        "cost": 932912353.36,
+        "grossProfit": 115915773.79,
+        "grossMarginRate": 11.05,
+        "receivable": 929471486.28,
+        "collectionRate": 88.62,
+        "operatingCashFlow": 92.95
+      },
+      {
+        "month": "2024-04",
+        "revenue": 1022931299.89,
+        "cost": 877592334.6,
+        "grossProfit": 145338965.29,
+        "grossMarginRate": 14.21,
+        "receivable": 888620420.21,
+        "collectionRate": 86.87,
+        "operatingCashFlow": 88.86
+      },
+      {
+        "month": "2024-05",
+        "revenue": 1119585484.9,
+        "cost": 906576172.98,
+        "grossProfit": 213009311.92,
+        "grossMarginRate": 19.03,
+        "receivable": 974151330.41,
+        "collectionRate": 87.01,
+        "operatingCashFlow": 97.42
+      },
+      {
+        "month": "2024-06",
+        "revenue": 1104377441.1,
+        "cost": 909276243.78,
+        "grossProfit": 195101197.32,
+        "grossMarginRate": 17.67,
+        "receivable": 973950465.31,
+        "collectionRate": 88.19,
+        "operatingCashFlow": 97.4
+      },
+      {
+        "month": "2024-07",
+        "revenue": 1084180765.77,
+        "cost": 880566808.02,
+        "grossProfit": 203613957.75,
+        "grossMarginRate": 18.78,
+        "receivable": 945080373.52,
+        "collectionRate": 87.17,
+        "operatingCashFlow": 94.51
+      },
+      {
+        "month": "2024-08",
+        "revenue": 1106293324.42,
+        "cost": 966665234.22,
+        "grossProfit": 139628090.2,
+        "grossMarginRate": 12.62,
+        "receivable": 968338546.86,
+        "collectionRate": 87.53,
+        "operatingCashFlow": 96.83
+      },
+      {
+        "month": "2024-09",
+        "revenue": 1109582830.29,
+        "cost": 958116104.66,
+        "grossProfit": 151466725.63,
+        "grossMarginRate": 13.65,
+        "receivable": 972660309.03,
+        "collectionRate": 87.66,
+        "operatingCashFlow": 97.27
+      },
+      {
+        "month": "2024-10",
+        "revenue": 1066040735.37,
+        "cost": 1009880770.45,
+        "grossProfit": 56159964.92,
+        "grossMarginRate": 5.27,
+        "receivable": 943659258.95,
+        "collectionRate": 88.52,
+        "operatingCashFlow": 94.37
+      },
+      {
+        "month": "2024-11",
+        "revenue": 1133094624.64,
+        "cost": 956283303.96,
+        "grossProfit": 176811320.68,
+        "grossMarginRate": 15.6,
+        "receivable": 1018198829.7,
+        "collectionRate": 89.86,
+        "operatingCashFlow": 101.82
+      },
+      {
+        "month": "2024-12",
+        "revenue": 1202700855.36,
+        "cost": 981790338.46,
+        "grossProfit": 220910516.9,
+        "grossMarginRate": 18.37,
+        "receivable": 1096742910,
+        "collectionRate": 91.19,
+        "operatingCashFlow": 109.67
+      },
+      {
+        "month": "2025-01",
+        "revenue": 1122977690.79,
+        "cost": 971315721.65,
+        "grossProfit": 151661969.14,
+        "grossMarginRate": 13.51,
+        "receivable": 1016968596.78,
+        "collectionRate": 90.56,
+        "operatingCashFlow": 101.7
+      },
+      {
+        "month": "2025-02",
+        "revenue": 1157014395.81,
+        "cost": 954677145.52,
+        "grossProfit": 202337250.29,
+        "grossMarginRate": 17.49,
+        "receivable": 1041544359.11,
+        "collectionRate": 90.02,
+        "operatingCashFlow": 104.15
+      },
+      {
+        "month": "2025-03",
+        "revenue": 1128271713.25,
+        "cost": 1023090963.86,
+        "grossProfit": 105180749.39,
+        "grossMarginRate": 9.32,
+        "receivable": 1029209456.83,
+        "collectionRate": 91.22,
+        "operatingCashFlow": 102.92
+      },
+      {
+        "month": "2025-04",
+        "revenue": 1272743783.73,
+        "cost": 1003790566.02,
+        "grossProfit": 268953217.71,
+        "grossMarginRate": 21.13,
+        "receivable": 1150051282.98,
+        "collectionRate": 90.36,
+        "operatingCashFlow": 115.01
+      },
+      {
+        "month": "2025-05",
+        "revenue": 1192974294.26,
+        "cost": 1007566221.18,
+        "grossProfit": 185408073.08,
+        "grossMarginRate": 15.54,
+        "receivable": 1085129418.06,
+        "collectionRate": 90.96,
+        "operatingCashFlow": 108.51
+      },
+      {
+        "month": "2025-06",
+        "revenue": 1244301520.96,
+        "cost": 1085266303.86,
+        "grossProfit": 159035217.1,
+        "grossMarginRate": 12.78,
+        "receivable": 1129576920.73,
+        "collectionRate": 90.78,
+        "operatingCashFlow": 112.96
+      },
+      {
+        "month": "2025-07",
+        "revenue": 1260186114.99,
+        "cost": 1025398863.03,
+        "grossProfit": 234787251.96,
+        "grossMarginRate": 18.63,
+        "receivable": 1164916044.7,
+        "collectionRate": 92.44,
+        "operatingCashFlow": 116.49
+      },
+      {
+        "month": "2025-08",
+        "revenue": 1241415600.05,
+        "cost": 1069012250.46,
+        "grossProfit": 172403349.59,
+        "grossMarginRate": 13.89,
+        "receivable": 1154268224.93,
+        "collectionRate": 92.98,
+        "operatingCashFlow": 115.43
+      },
+      {
+        "month": "2025-09",
+        "revenue": 1327356714.53,
+        "cost": 1083736119.1,
+        "grossProfit": 243620595.43,
+        "grossMarginRate": 18.35,
+        "receivable": 1209752909.62,
+        "collectionRate": 91.14,
+        "operatingCashFlow": 120.98
+      },
+      {
+        "month": "2025-10",
+        "revenue": 1344385179.42,
+        "cost": 1132967151.63,
+        "grossProfit": 211418027.79,
+        "grossMarginRate": 15.73,
+        "receivable": 1232129016.94,
+        "collectionRate": 91.65,
+        "operatingCashFlow": 123.21
+      },
+      {
+        "month": "2025-11",
+        "revenue": 1344908882.75,
+        "cost": 1125887238.72,
+        "grossProfit": 219021644.03,
+        "grossMarginRate": 16.29,
+        "receivable": 1266097222.22,
+        "collectionRate": 94.14,
+        "operatingCashFlow": 126.61
+      },
+      {
+        "month": "2025-12",
+        "revenue": 1254137074.6,
+        "cost": 1119295821.3,
+        "grossProfit": 134841253.3,
+        "grossMarginRate": 10.75,
+        "receivable": 1153680694.92,
+        "collectionRate": 91.99,
+        "operatingCashFlow": 115.37
+      },
+      {
+        "month": "2026-01",
+        "revenue": 1261215905.97,
+        "cost": 1080739415.89,
+        "grossProfit": 180476490.08,
+        "grossMarginRate": 14.31,
+        "receivable": 1178984628.9,
+        "collectionRate": 93.48,
+        "operatingCashFlow": 117.9
+      },
+      {
+        "month": "2026-02",
+        "revenue": 790000000,
+        "cost": 620870646.74,
+        "grossProfit": 169129353.26,
+        "grossMarginRate": 21.41,
+        "receivable": 726879000,
+        "collectionRate": 92.01,
+        "operatingCashFlow": 72.69
+      },
+      {
+        "month": "2026-03",
+        "revenue": 1362000000,
+        "cost": 1139694133.2,
+        "grossProfit": 222305866.8,
+        "grossMarginRate": 16.32,
+        "receivable": 1253040000,
+        "collectionRate": 92,
+        "operatingCashFlow": 125.3
+      }
+    ]
+  },
+  "rd": {
+    "kpis": {
+      "activeProjects": 12,
+      "milestoneOnTimeRate": 98.57,
+      "budgetExecutionRate": 81.62,
+      "registrationNodeOnTimeRate": 88.7
+    },
+    "milestoneTrend": [
+      {
+        "month": "2024-01",
+        "planned": 12,
+        "completed": 12,
+        "completionRate": 100
+      },
+      {
+        "month": "2024-02",
+        "planned": 10,
+        "completed": 10,
+        "completionRate": 100
+      },
+      {
+        "month": "2024-03",
+        "planned": 12,
+        "completed": 11,
+        "completionRate": 91.67
+      },
+      {
+        "month": "2024-04",
+        "planned": 13,
+        "completed": 11,
+        "completionRate": 84.62
+      },
+      {
+        "month": "2024-05",
+        "planned": 9,
+        "completed": 8,
+        "completionRate": 88.89
+      },
+      {
+        "month": "2024-06",
+        "planned": 13,
+        "completed": 13,
+        "completionRate": 100
+      },
+      {
+        "month": "2024-07",
+        "planned": 11,
+        "completed": 9,
+        "completionRate": 81.82
+      },
+      {
+        "month": "2024-08",
+        "planned": 9,
+        "completed": 9,
+        "completionRate": 100
+      },
+      {
+        "month": "2024-09",
+        "planned": 10,
+        "completed": 9,
+        "completionRate": 90
+      },
+      {
+        "month": "2024-10",
+        "planned": 10,
+        "completed": 10,
+        "completionRate": 100
+      },
+      {
+        "month": "2024-11",
+        "planned": 9,
+        "completed": 9,
+        "completionRate": 100
+      },
+      {
+        "month": "2024-12",
+        "planned": 10,
+        "completed": 10,
+        "completionRate": 100
+      },
+      {
+        "month": "2025-01",
+        "planned": 10,
+        "completed": 10,
+        "completionRate": 100
+      },
+      {
+        "month": "2025-02",
+        "planned": 11,
+        "completed": 10,
+        "completionRate": 90.91
+      },
+      {
+        "month": "2025-03",
+        "planned": 13,
+        "completed": 11,
+        "completionRate": 84.62
+      },
+      {
+        "month": "2025-04",
+        "planned": 10,
+        "completed": 9,
+        "completionRate": 90
+      },
+      {
+        "month": "2025-05",
+        "planned": 9,
+        "completed": 9,
+        "completionRate": 100
+      },
+      {
+        "month": "2025-06",
+        "planned": 10,
+        "completed": 9,
+        "completionRate": 90
+      },
+      {
+        "month": "2025-07",
+        "planned": 10,
+        "completed": 8,
+        "completionRate": 80
+      },
+      {
+        "month": "2025-08",
+        "planned": 12,
+        "completed": 11,
+        "completionRate": 91.67
+      },
+      {
+        "month": "2025-09",
+        "planned": 12,
+        "completed": 12,
+        "completionRate": 100
+      },
+      {
+        "month": "2025-10",
+        "planned": 10,
+        "completed": 9,
+        "completionRate": 90
+      },
+      {
+        "month": "2025-11",
+        "planned": 12,
+        "completed": 12,
+        "completionRate": 100
+      },
+      {
+        "month": "2025-12",
+        "planned": 9,
+        "completed": 8,
+        "completionRate": 88.89
+      },
+      {
+        "month": "2026-01",
+        "planned": 11,
+        "completed": 9,
+        "completionRate": 81.82
+      },
+      {
+        "month": "2026-02",
+        "planned": 12,
+        "completed": 12,
+        "completionRate": 100
+      },
+      {
+        "month": "2026-03",
+        "planned": 13,
+        "completed": 12,
+        "completionRate": 98.57
+      }
+    ],
+    "stageDistribution": [
+      {
+        "stage": "Executing",
+        "count": 4
+      },
+      {
+        "stage": "FinishProject",
+        "count": 4
+      },
+      {
+        "stage": "Start",
+        "count": 4
+      }
+    ],
+    "projects": [
+      {
+        "project": "乙肝三代",
+        "stage": "Executing",
+        "budget": 632.17,
+        "actual": 499.77,
+        "progress": 27,
+        "risk": 5
+      },
+      {
+        "project": "VTE",
+        "stage": "FinishProject",
+        "budget": 825.14,
+        "actual": 685.55,
+        "progress": 100,
+        "risk": 0
+      },
+      {
+        "project": "肺炎、流感、卡他（SPHIMC）",
+        "stage": "Executing",
+        "budget": 1225.07,
+        "actual": 1033.99,
+        "progress": 82,
+        "risk": 16
+      },
+      {
+        "project": "POCT维护工具盒（CM31）",
+        "stage": "Executing",
+        "budget": 25782.4,
+        "actual": 21366.52,
+        "progress": 100,
+        "risk": 93
+      },
+      {
+        "project": "C端耗材类预研项目",
+        "stage": "Executing",
+        "budget": 1480.43,
+        "actual": 1199.17,
+        "progress": 17,
+        "risk": 2
+      },
+      {
+        "project": "测序仪",
+        "stage": "FinishProject",
+        "budget": 1304.23,
+        "actual": 901.11,
+        "progress": 100,
+        "risk": 100
+      },
+      {
+        "project": "污水样本处理方案开发",
+        "stage": "FinishProject",
+        "budget": 1098.05,
+        "actual": 904.05,
+        "progress": 100,
+        "risk": 20
+      },
+      {
+        "project": "长效直扩保存液",
+        "stage": "FinishProject",
+        "budget": 1146.04,
+        "actual": 875.45,
+        "progress": 100,
+        "risk": 27
+      },
+      {
+        "project": "革兰氏阳性菌panel 1（基于PBC）",
+        "stage": "Start",
+        "budget": 1080.95,
+        "actual": 883.08,
+        "progress": 11,
+        "risk": 11
+      },
+      {
+        "project": "补充细菌panel 2",
+        "stage": "Start",
+        "budget": 734.54,
+        "actual": 572.1,
+        "progress": 11,
+        "risk": 11
+      },
+      {
+        "project": "革兰氏阴性菌panel 1（基于PBC）",
+        "stage": "Start",
+        "budget": 1052.49,
+        "actual": 913.67,
+        "progress": 11,
+        "risk": 11
+      },
+      {
+        "project": "速敏试剂研发部门公摊",
+        "stage": "Start",
+        "budget": 1385.78,
+        "actual": 973.98,
+        "progress": 11,
+        "risk": 11
+      }
+    ]
+  },
+  "hr": {
+    "kpis": {
+      "totalHeadcount": 2397,
+      "keyTalentRate": 76.04,
+      "monthlyTurnoverRate": 0.71,
+      "revenuePerCapita": 83.29
+    },
+    "headcountTrend": [
+      {
+        "month": "2024-01",
+        "headcount": 2119,
+        "keyTalent": 1555,
+        "revenuePerCapita": 68.81
+      },
+      {
+        "month": "2024-02",
+        "headcount": 2113,
+        "keyTalent": 1601,
+        "revenuePerCapita": 72.56
+      },
+      {
+        "month": "2024-03",
+        "headcount": 2131,
+        "keyTalent": 1602,
+        "revenuePerCapita": 72.43
+      },
+      {
+        "month": "2024-04",
+        "headcount": 2100,
+        "keyTalent": 1520,
+        "revenuePerCapita": 71.03
+      },
+      {
+        "month": "2024-05",
+        "headcount": 2116,
+        "keyTalent": 1619,
+        "revenuePerCapita": 68.06
+      },
+      {
+        "month": "2024-06",
+        "headcount": 2153,
+        "keyTalent": 1639,
+        "revenuePerCapita": 70.58
+      },
+      {
+        "month": "2024-07",
+        "headcount": 2138,
+        "keyTalent": 1639,
+        "revenuePerCapita": 70.97
+      },
+      {
+        "month": "2024-08",
+        "headcount": 2173,
+        "keyTalent": 1620,
+        "revenuePerCapita": 70.1
+      },
+      {
+        "month": "2024-09",
+        "headcount": 2136,
+        "keyTalent": 1679,
+        "revenuePerCapita": 76.57
+      },
+      {
+        "month": "2024-10",
+        "headcount": 2167,
+        "keyTalent": 1669,
+        "revenuePerCapita": 73.73
+      },
+      {
+        "month": "2024-11",
+        "headcount": 2213,
+        "keyTalent": 1689,
+        "revenuePerCapita": 74.79
+      },
+      {
+        "month": "2024-12",
+        "headcount": 2246,
+        "keyTalent": 1678,
+        "revenuePerCapita": 77.61
+      },
+      {
+        "month": "2025-01",
+        "headcount": 2229,
+        "keyTalent": 1717,
+        "revenuePerCapita": 75.47
+      },
+      {
+        "month": "2025-02",
+        "headcount": 2223,
+        "keyTalent": 1720,
+        "revenuePerCapita": 77.53
+      },
+      {
+        "month": "2025-03",
+        "headcount": 2278,
+        "keyTalent": 1713,
+        "revenuePerCapita": 75.28
+      },
+      {
+        "month": "2025-04",
+        "headcount": 2233,
+        "keyTalent": 1687,
+        "revenuePerCapita": 76.71
+      },
+      {
+        "month": "2025-05",
+        "headcount": 2311,
+        "keyTalent": 1672,
+        "revenuePerCapita": 78.61
+      },
+      {
+        "month": "2025-06",
+        "headcount": 2319,
+        "keyTalent": 1729,
+        "revenuePerCapita": 77.59
+      },
+      {
+        "month": "2025-07",
+        "headcount": 2304,
+        "keyTalent": 1778,
+        "revenuePerCapita": 77.32
+      },
+      {
+        "month": "2025-08",
+        "headcount": 2280,
+        "keyTalent": 1754,
+        "revenuePerCapita": 82.16
+      },
+      {
+        "month": "2025-09",
+        "headcount": 2285,
+        "keyTalent": 1792,
+        "revenuePerCapita": 83.13
+      },
+      {
+        "month": "2025-10",
+        "headcount": 2351,
+        "keyTalent": 1795,
+        "revenuePerCapita": 80.54
+      },
+      {
+        "month": "2025-11",
+        "headcount": 2319,
+        "keyTalent": 1778,
+        "revenuePerCapita": 83.32
+      },
+      {
+        "month": "2025-12",
+        "headcount": 2364,
+        "keyTalent": 1789,
+        "revenuePerCapita": 78.43
+      },
+      {
+        "month": "2026-01",
+        "headcount": 2363,
+        "keyTalent": 1770,
+        "revenuePerCapita": 80.62
+      },
+      {
+        "month": "2026-02",
+        "headcount": 2416,
+        "keyTalent": 1763,
+        "revenuePerCapita": 81.9
+      },
+      {
+        "month": "2026-03",
+        "headcount": 2397,
+        "keyTalent": 1823,
+        "revenuePerCapita": 83.29
+      }
+    ],
+    "departmentStructure": [
+      {
+        "department": "圣湘生物科技股份有限公司",
+        "headcount": 1501,
+        "target": 1565,
+        "turnoverRate": 11.02
+      },
+      {
+        "department": "中山圣湘海济生物医药有限公司",
+        "headcount": 311,
+        "target": 311,
+        "turnoverRate": 10.27
+      },
+      {
+        "department": "长沙市红岸基元生物科技有限公司",
+        "headcount": 107,
+        "target": 108,
+        "turnoverRate": 6.58
+      },
+      {
+        "department": "实习生",
+        "headcount": 99,
+        "target": 102,
+        "turnoverRate": 7.34
+      },
+      {
+        "department": "安赛诊断技术有限公司",
+        "headcount": 91,
+        "target": 92,
+        "turnoverRate": 6.8
+      },
+      {
+        "department": "圣维尔医学检验中心",
+        "headcount": 77,
+        "target": 79,
+        "turnoverRate": 11.3
+      },
+      {
+        "department": "湖南圣维鲲腾生物科技有限公司",
+        "headcount": 57,
+        "target": 58,
+        "turnoverRate": 10
+      },
+      {
+        "department": "湖南康得生物科技有限公司",
+        "headcount": 50,
+        "target": 55,
+        "turnoverRate": 8.79
+      }
+    ]
+  },
+  "division": {
+    "overview": {
+      "sampleCount": 535217,
+      "experimentCount": 116886,
+      "experimentAnalysisCount": 984261,
+      "qcResultCount": 77206,
+      "reportCount": 7906,
+      "patientCount": 545599,
+      "pathogenCount": 490,
+      "cdcPointCount": 16,
+      "jdSampleCount": 383445
+    },
+    "sheetVolumes": [
+      {
+        "sheet": "报告_poct_report_detail",
+        "domain": "报告",
+        "tableName": "poct_report_detail",
+        "totalRows": 6610549,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "实验_poct_task_raw_result",
+        "domain": "实验",
+        "tableName": "poct_task_raw_result",
+        "totalRows": 1035338,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "实验_poct_task_analysis_result",
+        "domain": "实验",
+        "tableName": "poct_task_analysis_result",
+        "totalRows": 984261,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "患者_poct_patient",
+        "domain": "患者",
+        "tableName": "poct_patient",
+        "totalRows": 545599,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "实验_poct_sample_no_rel",
+        "domain": "实验",
+        "tableName": "poct_sample_no_rel",
+        "totalRows": 538171,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "样本_poct_sample",
+        "domain": "样本",
+        "tableName": "poct_sample",
+        "totalRows": 535217,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "京东_poct_sample",
+        "domain": "京东",
+        "tableName": "poct_sample",
+        "totalRows": 383445,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "TNGS_tngs_gene",
+        "domain": "TNGS",
+        "tableName": "tngs_gene",
+        "totalRows": 141958,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "实验_poct_task_raw_data",
+        "domain": "实验",
+        "tableName": "poct_task_raw_data",
+        "totalRows": 116886,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "质控_dip_qc_task_result",
+        "domain": "质控",
+        "tableName": "dip_qc_task_result",
+        "totalRows": 77206,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "样本_poct_result_sample",
+        "domain": "样本",
+        "tableName": "poct_result_sample",
+        "totalRows": 26381,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "TNGS_tngs_sample",
+        "domain": "TNGS",
+        "tableName": "tngs_sample",
+        "totalRows": 19645,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "质控_dip_qc_task",
+        "domain": "质控",
+        "tableName": "dip_qc_task",
+        "totalRows": 19204,
+        "exportRows": 10000
+      },
+      {
+        "sheet": "报告_poct_sample_report",
+        "domain": "报告",
+        "tableName": "poct_sample_report",
+        "totalRows": 7906,
+        "exportRows": 7906
+      },
+      {
+        "sheet": "用户_poct_account",
+        "domain": "用户",
+        "tableName": "poct_account",
+        "totalRows": 1713,
+        "exportRows": 1713
+      },
+      {
+        "sheet": "机构_poct_org",
+        "domain": "机构",
+        "tableName": "poct_org",
+        "totalRows": 1375,
+        "exportRows": 1375
+      },
+      {
+        "sheet": "病原_poct_gene",
+        "domain": "病原",
+        "tableName": "poct_gene",
+        "totalRows": 490,
+        "exportRows": 490
+      },
+      {
+        "sheet": "项目_poct_item",
+        "domain": "项目",
+        "tableName": "poct_item",
+        "totalRows": 31,
+        "exportRows": 31
+      },
+      {
+        "sheet": "疾控_poct_sample_point",
+        "domain": "疾控",
+        "tableName": "poct_sample_point",
+        "totalRows": 16,
+        "exportRows": 16
+      }
+    ],
+    "sampleTypeDist": [
+      {
+        "name": "样本类型-3",
+        "count": 3495
+      },
+      {
+        "name": "样本类型-1",
+        "count": 3148
+      },
+      {
+        "name": "样本类型-7",
+        "count": 317
+      },
+      {
+        "name": "样本类型-8",
+        "count": 175
+      },
+      {
+        "name": "样本类型-11",
+        "count": 12
+      },
+      {
+        "name": "样本类型-5",
+        "count": 2
+      },
+      {
+        "name": "样本类型-6",
+        "count": 1
+      },
+      {
+        "name": "样本类型-2",
+        "count": 1
+      }
+    ],
+    "detectionResultDist": [
+      {
+        "name": "检测结果-暂无",
+        "count": 9827
+      },
+      {
+        "name": "检测结果-阴性",
+        "count": 104
+      },
+      {
+        "name": "检测结果-阳性",
+        "count": 69
+      }
+    ],
+    "experimentTypeDist": [
+      {
+        "name": "实时荧光 PCR 法",
+        "count": 9614
+      },
+      {
+        "name": "实时荧光PCR",
+        "count": 164
+      },
+      {
+        "name": "咽拭子",
+        "count": 33
+      },
+      {
+        "name": "超声直扩+POCT核酸快检",
+        "count": 16
+      },
+      {
+        "name": "实时荧光PCR法",
+        "count": 9
+      },
+      {
+        "name": "急性支气管炎",
+        "count": 3
+      },
+      {
+        "name": "PCR检测",
+        "count": 2
+      },
+      {
+        "name": "PCR",
+        "count": 2
+      },
+      {
+        "name": "11",
+        "count": 1
+      },
+      {
+        "name": "1111",
+        "count": 1
+      }
+    ],
+    "experimentStatusDist": [
+      {
+        "name": "已完成",
+        "count": 9952
+      },
+      {
+        "name": "异常",
+        "count": 18
+      },
+      {
+        "name": "已开始",
+        "count": 17
+      },
+      {
+        "name": "进行中",
+        "count": 7
+      }
+    ],
+    "qcResultDist": [
+      {
+        "name": "阳性",
+        "count": 6653
+      },
+      {
+        "name": "阴性",
+        "count": 2053
+      }
+    ],
+    "qcValueTypeDist": [
+      {
+        "name": "CT",
+        "count": 9748
+      },
+      {
+        "name": "TM",
+        "count": 252
+      }
+    ],
+    "reportTypeDist": [
+      {
+        "name": "报告类型-1",
+        "count": 7859
+      },
+      {
+        "name": "报告类型-5",
+        "count": 31
+      },
+      {
+        "name": "报告类型-2",
+        "count": 15
+      },
+      {
+        "name": "报告类型-9",
+        "count": 1
+      }
+    ],
+    "reportStatusDist": [
+      {
+        "name": "已出报告",
+        "count": 7076
+      },
+      {
+        "name": "已审核",
+        "count": 825
+      },
+      {
+        "name": "已作废",
+        "count": 5
+      }
+    ],
+    "patientSexDist": [
+      {
+        "name": "男",
+        "count": 4520
+      },
+      {
+        "name": "女",
+        "count": 3993
+      }
+    ],
+    "patientAgeDist": [
+      {
+        "name": "0-17",
+        "count": 3291
+      },
+      {
+        "name": "未知",
+        "count": 1152
+      },
+      {
+        "name": "30-44",
+        "count": 152
+      },
+      {
+        "name": "45-59",
+        "count": 56
+      },
+      {
+        "name": "18-29",
+        "count": 48
+      },
+      {
+        "name": "60+",
+        "count": 45
+      }
+    ],
+    "patientRegionDist": [
+      {
+        "name": "北京市-市辖区-东城区",
+        "count": 338
+      },
+      {
+        "name": "福建省-福州市-台江区",
+        "count": 5
+      },
+      {
+        "name": "内蒙古自治区-赤峰市-松山区",
+        "count": 1
+      },
+      {
+        "name": "福建省-福州市",
+        "count": 1
+      },
+      {
+        "name": "湖北省/武汉市/江岸区",
+        "count": 1
+      },
+      {
+        "name": "北京市/北京市/东城区",
+        "count": 1
+      }
+    ],
+    "pathogenClassDist": [
+      {
+        "name": "上呼吸道",
+        "count": 16
+      },
+      {
+        "name": "下呼吸道",
+        "count": 7
+      }
+    ],
+    "pathogenRiskDist": [
+      {
+        "name": "低风险",
+        "count": 461
+      },
+      {
+        "name": "高风险",
+        "count": 29
+      }
+    ],
+    "cdcPointTypeDist": [
+      {
+        "name": "点位类型-50",
+        "count": 13
+      },
+      {
+        "name": "点位类型-1",
+        "count": 3
+      }
+    ],
+    "cdcRegionDist": [
+      {
+        "name": "湖南省-长沙市-岳麓区",
+        "count": 5
+      },
+      {
+        "name": "湖南省-长沙市-开福区",
+        "count": 3
+      },
+      {
+        "name": "湖南省-长沙市-雨花区",
+        "count": 2
+      },
+      {
+        "name": "湖南省-长沙市-天心区",
+        "count": 2
+      },
+      {
+        "name": "湖南省-长沙市-芙蓉区",
+        "count": 2
+      },
+      {
+        "name": "北京市-市辖区-东城区",
+        "count": 1
+      },
+      {
+        "name": "湖南省-长沙市-望城区",
+        "count": 1
+      }
+    ],
+    "jdDetectionTypeDist": [
+      {
+        "name": "实时荧光 PCR 法",
+        "count": 8755
+      },
+      {
+        "name": "超声直扩+POCT核酸快检",
+        "count": 1158
+      },
+      {
+        "name": "临床基础检验",
+        "count": 30
+      },
+      {
+        "name": "免疫检验",
+        "count": 27
+      },
+      {
+        "name": "实时荧光PCR法",
+        "count": 26
+      },
+      {
+        "name": "PCR实验",
+        "count": 2
+      },
+      {
+        "name": "PCR 抗体",
+        "count": 1
+      }
+    ],
+    "jdSampleTypeDist": [
+      {
+        "name": "样本类型-7",
+        "count": 8639
+      },
+      {
+        "name": "样本类型-30",
+        "count": 77
+      },
+      {
+        "name": "样本类型-3",
+        "count": 71
+      },
+      {
+        "name": "样本类型-31",
+        "count": 68
+      },
+      {
+        "name": "样本类型-33",
+        "count": 23
+      },
+      {
+        "name": "样本类型-34",
+        "count": 19
+      },
+      {
+        "name": "样本类型-12",
+        "count": 10
+      },
+      {
+        "name": "样本类型-8",
+        "count": 2
+      }
+    ],
+    "jdReportStatusDist": [
+      {
+        "name": "未出报告",
+        "count": 9959
+      },
+      {
+        "name": "已审核",
+        "count": 41
+      }
+    ]
+  },
+  "alerts": [
+    {
+      "module": "销售",
+      "org": "东北大区",
+      "metric": "月度达成率",
+      "value": 33.32,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "非公医疗",
+      "metric": "月度达成率",
+      "value": 31.37,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "湖南大区",
+      "metric": "月度达成率",
+      "value": 29.72,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "苏皖大区",
+      "metric": "月度达成率",
+      "value": 18.55,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "陕晋大区",
+      "metric": "月度达成率",
+      "value": 16.74,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "华南大区",
+      "metric": "月度达成率",
+      "value": 15.78,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "西北大区",
+      "metric": "月度达成率",
+      "value": 14.4,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "河南大区",
+      "metric": "月度达成率",
+      "value": 14.07,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "沪闽大区",
+      "metric": "月度达成率",
+      "value": 12.58,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "渝贵大区",
+      "metric": "月度达成率",
+      "value": 12.56,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "四川大区",
+      "metric": "月度达成率",
+      "value": 12.21,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "京津大区",
+      "metric": "月度达成率",
+      "value": 11.65,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "浙江大区",
+      "metric": "月度达成率",
+      "value": 10.77,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "鲁冀大区",
+      "metric": "月度达成率",
+      "value": 9.98,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "云桂琼大区",
+      "metric": "月度达成率",
+      "value": 9.92,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "居家项目组",
+      "metric": "月度达成率",
+      "value": 0.07,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "血站业务部",
+      "metric": "月度达成率",
+      "value": 45.3,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "销售",
+      "org": "创新业务部",
+      "metric": "月度达成率",
+      "value": 38.9,
+      "threshold": "< 90%",
+      "level": "红",
+      "reason": "目标达成明显偏离"
+    },
+    {
+      "module": "研发",
+      "org": "研发中心",
+      "metric": "里程碑按期达成率",
+      "value": 98.57,
+      "threshold": "90% - 100%",
+      "level": "黄",
+      "reason": "里程碑达成低于预期节奏"
+    }
+  ]
+}
