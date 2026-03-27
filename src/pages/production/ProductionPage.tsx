@@ -1,7 +1,30 @@
-import { Card, Col, Row, Statistic, Typography } from 'antd';
+import { Card, Col, Row, Statistic, Tooltip, Typography } from 'antd';
+import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
+import { indicatorDefinitions } from '../../components/IndicatorTooltip';
+import { EfficiencyDrillDown } from '../../components/EfficiencyDrillDown';
+
+function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
+  const info = indicatorDefinitions[indicatorKey];
+  if (!info || info.isAtomic) return label;
+  return (
+    <span>
+      {label}
+      <Tooltip
+        title={
+          <div>
+            <div style={{ marginBottom: 8 }}><strong>定义：</strong>{info.definition}</div>
+            <div><strong>计算公式：</strong><code style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 6px', borderRadius: 4 }}>{info.formula}</code></div>
+          </div>
+        }
+      >
+        <QuestionCircleOutlined style={{ marginLeft: 4, cursor: 'help', color: '#999' }} />
+      </Tooltip>
+    </span>
+  );
+}
 
 function colorByRate(value: number, good: number, warn: number) {
   if (value >= good) {
@@ -133,13 +156,13 @@ export function ProductionPage() {
       <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
         <Col xs={24} sm={12} lg={6} id="kpi-total-headcount">
           <Card>
-            <Statistic title="总在岗人数" value={hr.kpis.totalHeadcount} suffix="人" />
+            <Statistic title={<KpiLabel label="总在岗人数" indicatorKey="totalHeadcount" />} value={hr.kpis.totalHeadcount} suffix="人" />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
           <Card>
             <Statistic
-              title="关键人才占比"
+              title={<KpiLabel label="关键人才占比" indicatorKey="keyTalentRate" />}
               value={hr.kpis.keyTalentRate}
               precision={2}
               suffix="%"
@@ -150,7 +173,7 @@ export function ProductionPage() {
         <Col xs={24} sm={12} lg={6}>
           <Card>
             <Statistic
-              title="月离职率"
+              title={<KpiLabel label="月离职率" indicatorKey="monthlyTurnoverRate" />}
               value={hr.kpis.monthlyTurnoverRate}
               precision={2}
               suffix="%"
@@ -161,7 +184,7 @@ export function ProductionPage() {
         <Col xs={24} sm={12} lg={6}>
           <Card>
             <Statistic
-              title="人均产出"
+              title={<KpiLabel label="人均产出" indicatorKey="revenuePerCapita" />}
               value={hr.kpis.revenuePerCapita}
               precision={2}
               suffix="万元/人"
@@ -170,23 +193,29 @@ export function ProductionPage() {
         </Col>
       </Row>
 
-      <Row gutter={[12, 12]}>
-        <Col xs={24} lg={15}>
+      <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
+        <Col xs={24} lg={12}>
+          <EfficiencyDrillDown data={hr.efficiency} />
+        </Col>
+        <Col xs={24} lg={12}>
           <Card title="组织规模与人均产出趋势">
             <ReactECharts option={trendOption} style={{ height: 320 }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
-        <Col xs={24} lg={9}>
+      </Row>
+
+      <Row gutter={[12, 12]}>
+        <Col xs={24} lg={12}>
           <Card title="部门离职率雷达">
             <ReactECharts option={turnoverOption} style={{ height: 320 }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
-        <Col xs={24} lg={14}>
+        <Col xs={24} lg={12}>
           <Card title="部门编制与在岗对比">
             <ReactECharts option={structureOption} style={{ height: 340 }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
-        <Col xs={24} lg={10}>
+        <Col xs={24}>
           <Card title="人员规模与流失风险分布">
             <ReactECharts option={scatterOption} style={{ height: 340 }} onEvents={chartJumpEvents} />
           </Card>

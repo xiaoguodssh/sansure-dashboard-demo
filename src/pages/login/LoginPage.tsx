@@ -19,7 +19,7 @@ export function LoginPage() {
 
   const handleEnter = () => {
     if (!isChairman) {
-      message.warning('其他角色演示功能暂未开放');
+      message.warning('当前仅董事长角色可登录系统');
       return;
     }
     if (username !== ADMIN_USERNAME || password !== ADMIN_PASSWORD) {
@@ -35,7 +35,7 @@ export function LoginPage() {
       <Card style={{ width: 460 }}>
         <Typography.Title level={3}>集团经营管理驾驶舱 Demo</Typography.Title>
         <Typography.Paragraph type="secondary">
-          请选择演示角色进入系统（本期：董事长+高管分级可见）。
+          请选择演示角色进入系统（当前仅董事长角色可登录）。
         </Typography.Paragraph>
         <Space direction="vertical" style={{ width: '100%' }}>
           <Select<UserRole>

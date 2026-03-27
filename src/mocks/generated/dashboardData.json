@@ -2877,7 +2877,122 @@
         "target": 55,
         "turnoverRate": 8.79
       }
-    ]
+    ],
+    "efficiency": {
+      "companyScore": 72.5,
+      "departments": [
+        {
+          "id": "dept-001",
+          "name": "圣湘生物科技股份有限公司",
+          "score": 75.3,
+          "employeeCount": 12,
+          "employees": [
+            { "id": "emp-001", "name": "张伟", "score": 85, "department": "圣湘生物科技股份有限公司", "position": "高级工程师" },
+            { "id": "emp-002", "name": "李娜", "score": 82, "department": "圣湘生物科技股份有限公司", "position": "工程师" },
+            { "id": "emp-003", "name": "王强", "score": 79, "department": "圣湘生物科技股份有限公司", "position": "工程师" },
+            { "id": "emp-004", "name": "刘洋", "score": 76, "department": "圣湘生物科技股份有限公司", "position": "工程师" },
+            { "id": "emp-005", "name": "陈静", "score": 74, "department": "圣湘生物科技股份有限公司", "position": "助理工程师" },
+            { "id": "emp-006", "name": "赵明", "score": 72, "department": "圣湘生物科技股份有限公司", "position": "助理工程师" },
+            { "id": "emp-007", "name": "孙丽", "score": 70, "department": "圣湘生物科技股份有限公司", "position": "技术员" },
+            { "id": "emp-008", "name": "周涛", "score": 68, "department": "圣湘生物科技股份有限公司", "position": "技术员" },
+            { "id": "emp-009", "name": "吴芳", "score": 65, "department": "圣湘生物科技股份有限公司", "position": "实习生" },
+            { "id": "emp-010", "name": "郑鹏", "score": 88, "department": "圣湘生物科技股份有限公司", "position": "技术总监" },
+            { "id": "emp-011", "name": "黄蕾", "score": 83, "department": "圣湘生物科技股份有限公司", "position": "项目经理" },
+            { "id": "emp-012", "name": "林峰", "score": 60, "department": "圣湘生物科技股份有限公司", "position": "实习生" }
+          ]
+        },
+        {
+          "id": "dept-002",
+          "name": "中山圣湘海济生物医药有限公司",
+          "score": 78.6,
+          "employeeCount": 10,
+          "employees": [
+            { "id": "emp-013", "name": "钱进", "score": 92, "department": "中山圣湘海济生物医药有限公司", "position": "销售总监" },
+            { "id": "emp-014", "name": "冯雪", "score": 86, "department": "中山圣湘海济生物医药有限公司", "position": "销售经理" },
+            { "id": "emp-015", "name": "蒋磊", "score": 81, "department": "中山圣湘海济生物医药有限公司", "position": "高级销售" },
+            { "id": "emp-016", "name": "沈婷", "score": 78, "department": "中山圣湘海济生物医药有限公司", "position": "销售代表" },
+            { "id": "emp-017", "name": "韩冰", "score": 75, "department": "中山圣湘海济生物医药有限公司", "position": "销售代表" },
+            { "id": "emp-018", "name": "杨帆", "score": 72, "department": "中山圣湘海济生物医药有限公司", "position": "销售代表" },
+            { "id": "emp-019", "name": "朱红", "score": 70, "department": "中山圣湘海济生物医药有限公司", "position": "销售助理" },
+            { "id": "emp-020", "name": "秦勇", "score": 68, "department": "中山圣湘海济生物医药有限公司", "position": "销售助理" },
+            { "id": "emp-021", "name": "许晴", "score": 65, "department": "中山圣湘海济生物医药有限公司", "position": "实习生" },
+            { "id": "emp-022", "name": "何亮", "score": 58, "department": "中山圣湘海济生物医药有限公司", "position": "实习生" }
+          ]
+        },
+        {
+          "id": "dept-003",
+          "name": "长沙市红岸基元生物科技有限公司",
+          "score": 71.2,
+          "employeeCount": 8,
+          "employees": [
+            { "id": "emp-023", "name": "梁军", "score": 82, "department": "长沙市红岸基元生物科技有限公司", "position": "生产经理" },
+            { "id": "emp-024", "name": "谢华", "score": 78, "department": "长沙市红岸基元生物科技有限公司", "position": "生产主管" },
+            { "id": "emp-025", "name": "唐刚", "score": 75, "department": "长沙市红岸基元生物科技有限公司", "position": "技术员" },
+            { "id": "emp-026", "name": "邓丽", "score": 72, "department": "长沙市红岸基元生物科技有限公司", "position": "技术员" },
+            { "id": "emp-027", "name": "曹伟", "score": 70, "department": "长沙市红岸基元生物科技有限公司", "position": "操作员" },
+            { "id": "emp-028", "name": "彭涛", "score": 68, "department": "长沙市红岸基元生物科技有限公司", "position": "操作员" },
+            { "id": "emp-029", "name": "董敏", "score": 65, "department": "长沙市红岸基元生物科技有限公司", "position": "操作员" },
+            { "id": "emp-030", "name": "苏强", "score": 59, "department": "长沙市红岸基元生物科技有限公司", "position": "实习生" }
+          ]
+        },
+        {
+          "id": "dept-004",
+          "name": "安赛诊断技术有限公司",
+          "score": 69.5,
+          "employeeCount": 8,
+          "employees": [
+            { "id": "emp-031", "name": "蔡琳", "score": 85, "department": "安赛诊断技术有限公司", "position": "财务总监" },
+            { "id": "emp-032", "name": "贾磊", "score": 76, "department": "安赛诊断技术有限公司", "position": "财务经理" },
+            { "id": "emp-033", "name": "夏静", "score": 72, "department": "安赛诊断技术有限公司", "position": "会计" },
+            { "id": "emp-034", "name": "汪洋", "score": 68, "department": "安赛诊断技术有限公司", "position": "会计" },
+            { "id": "emp-035", "name": "石峰", "score": 65, "department": "安赛诊断技术有限公司", "position": "出纳" },
+            { "id": "emp-036", "name": "姚芳", "score": 62, "department": "安赛诊断技术有限公司", "position": "助理" },
+            { "id": "emp-037", "name": "田刚", "score": 60, "department": "安赛诊断技术有限公司", "position": "实习生" },
+            { "id": "emp-038", "name": "孟丽", "score": 67, "department": "安赛诊断技术有限公司", "position": "会计" }
+          ]
+        },
+        {
+          "id": "dept-005",
+          "name": "圣维尔医学检验中心",
+          "score": 73.4,
+          "employeeCount": 6,
+          "employees": [
+            { "id": "emp-039", "name": "范伟", "score": 88, "department": "圣维尔医学检验中心", "position": "HR总监" },
+            { "id": "emp-040", "name": "方芳", "score": 78, "department": "圣维尔医学检验中心", "position": "HR经理" },
+            { "id": "emp-041", "name": "石磊", "score": 72, "department": "圣维尔医学检验中心", "position": "招聘专员" },
+            { "id": "emp-042", "name": "谭敏", "score": 68, "department": "圣维尔医学检验中心", "position": "培训专员" },
+            { "id": "emp-043", "name": "潘强", "score": 65, "department": "圣维尔医学检验中心", "position": "HR助理" },
+            { "id": "emp-044", "name": "袁丽", "score": 69, "department": "圣维尔医学检验中心", "position": "薪酬专员" }
+          ]
+        },
+        {
+          "id": "dept-006",
+          "name": "湖南圣维鲲腾生物科技有限公司",
+          "score": 74.8,
+          "employeeCount": 5,
+          "employees": [
+            { "id": "emp-045", "name": "魏明", "score": 86, "department": "湖南圣维鲲腾生物科技有限公司", "position": "研发经理" },
+            { "id": "emp-046", "name": "曹芳", "score": 80, "department": "湖南圣维鲲腾生物科技有限公司", "position": "高级工程师" },
+            { "id": "emp-047", "name": "龚刚", "score": 75, "department": "湖南圣维鲲腾生物科技有限公司", "position": "工程师" },
+            { "id": "emp-048", "name": "程敏", "score": 68, "department": "湖南圣维鲲腾生物科技有限公司", "position": "助理工程师" },
+            { "id": "emp-049", "name": "傅强", "score": 65, "department": "湖南圣维鲲腾生物科技有限公司", "position": "技术员" }
+          ]
+        },
+        {
+          "id": "dept-007",
+          "name": "湖南康得生物科技有限公司",
+          "score": 70.1,
+          "employeeCount": 5,
+          "employees": [
+            { "id": "emp-050", "name": "沈磊", "score": 82, "department": "湖南康得生物科技有限公司", "position": "运营经理" },
+            { "id": "emp-051", "name": "曾芳", "score": 76, "department": "湖南康得生物科技有限公司", "position": "运营专员" },
+            { "id": "emp-052", "name": "彭刚", "score": 70, "department": "湖南康得生物科技有限公司", "position": "运营助理" },
+            { "id": "emp-053", "name": "卢敏", "score": 64, "department": "湖南康得生物科技有限公司", "position": "实习生" },
+            { "id": "emp-054", "name": "蒋强", "score": 58, "department": "湖南康得生物科技有限公司", "position": "实习生" }
+          ]
+        }
+      ]
+    }
   },
   "division": {
     "overview": {

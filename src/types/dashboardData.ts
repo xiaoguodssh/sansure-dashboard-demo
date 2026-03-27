@@ -158,6 +158,27 @@ export interface RdData {
   }>;
 }
 
+export interface HrEfficiencyEmployee {
+  id: string;
+  name: string;
+  score: number;
+  department: string;
+  position: string;
+}
+
+export interface HrEfficiencyDepartment {
+  id: string;
+  name: string;
+  score: number;
+  employeeCount: number;
+  employees: HrEfficiencyEmployee[];
+}
+
+export interface HrEfficiencyData {
+  companyScore: number;
+  departments: HrEfficiencyDepartment[];
+}
+
 export interface HrData {
   kpis: {
     totalHeadcount: number;
@@ -177,6 +198,7 @@ export interface HrData {
     target: number;
     turnoverRate: number;
   }>;
+  efficiency: HrEfficiencyData;
 }
 
 export interface DivisionData {

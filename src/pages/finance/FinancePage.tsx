@@ -1,7 +1,29 @@
-import { Card, Col, Row, Statistic, Table, Tag } from 'antd';
+import { Card, Col, Row, Statistic, Table, Tag, Tooltip } from 'antd';
+import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
+import { indicatorDefinitions } from '../../components/IndicatorTooltip';
+
+function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
+  const info = indicatorDefinitions[indicatorKey];
+  if (!info || info.isAtomic) return label;
+  return (
+    <span>
+      {label}
+      <Tooltip
+        title={
+          <div>
+            <div style={{ marginBottom: 8 }}><strong>定义：</strong>{info.definition}</div>
+            <div><strong>计算公式：</strong><code style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 6px', borderRadius: 4 }}>{info.formula}</code></div>
+          </div>
+        }
+      >
+        <QuestionCircleOutlined style={{ marginLeft: 4, cursor: 'help', color: '#999' }} />
+      </Tooltip>
+    </span>
+  );
+}
 
 function toWan(value: number) {
   return value / 10000;
@@ -94,18 +116,18 @@ export function FinancePage() {
       <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
         <Col xs={24} sm={12} lg={6}>
           <Card>
-            <Statistic title="收入" value={toWan(finance.kpis.revenue)} precision={2} suffix="万元" />
+            <Statistic title={<KpiLabel label="收入" indicatorKey="revenue" />} value={toWan(finance.kpis.revenue)} precision={2} suffix="万元" />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
           <Card>
-            <Statistic title="成本" value={toWan(finance.kpis.cost)} precision={2} suffix="万元" />
+            <Statistic title={<KpiLabel label="成本" indicatorKey="cost" />} value={toWan(finance.kpis.cost)} precision={2} suffix="万元" />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
           <Card>
             <Statistic
-              title="毛利"
+              title={<KpiLabel label="毛利" indicatorKey="grossProfit" />}
               value={toWan(finance.kpis.grossProfit)}
               precision={2}
               suffix="万元"
@@ -115,7 +137,7 @@ export function FinancePage() {
         </Col>
         <Col xs={24} sm={12} lg={6} id="kpi-operating-cashflow">
           <Card>
-            <Statistic title="经营性现金流" value={finance.kpis.operatingCashFlow} precision={2} suffix="百万元" />
+            <Statistic title={<KpiLabel label="经营性现金流" indicatorKey="operatingCashFlow" />} value={finance.kpis.operatingCashFlow} precision={2} suffix="百万元" />
           </Card>
         </Col>
       </Row>
@@ -123,17 +145,17 @@ export function FinancePage() {
       <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
         <Col xs={24} sm={12} lg={8} id="kpi-gross-margin-rate">
           <Card>
-            <Statistic title="毛利率" value={finance.kpis.grossMarginRate} precision={2} suffix="%" />
+            <Statistic title={<KpiLabel label="毛利率" indicatorKey="grossMarginRate" />} value={finance.kpis.grossMarginRate} precision={2} suffix="%" />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={8} id="kpi-profit-rate">
           <Card>
-            <Statistic title="利润达成率" value={finance.kpis.profitRate} precision={2} suffix="%" />
+            <Statistic title={<KpiLabel label="利润达成率" indicatorKey="profitRate" />} value={finance.kpis.profitRate} precision={2} suffix="%" />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={8} id="kpi-collection-rate">
           <Card>
-            <Statistic title="回款达成率" value={finance.kpis.collectionRate} precision={2} suffix="%" />
+            <Statistic title={<KpiLabel label="回款达成率" indicatorKey="collectionRate" />} value={finance.kpis.collectionRate} precision={2} suffix="%" />
           </Card>
         </Col>
       </Row>

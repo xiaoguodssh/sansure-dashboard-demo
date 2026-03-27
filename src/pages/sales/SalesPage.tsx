@@ -1,9 +1,31 @@
-import { Card, Col, Row, Segmented, Space, Statistic, Tag, Typography } from 'antd';
+import { Card, Col, Row, Segmented, Space, Statistic, Tag, Tooltip, Typography } from 'antd';
+import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
 import { useFilterStore } from '../../store/filter/useFilterStore';
+import { indicatorDefinitions } from '../../components/IndicatorTooltip';
+
+function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
+  const info = indicatorDefinitions[indicatorKey];
+  if (!info || info.isAtomic) return label;
+  return (
+    <span>
+      {label}
+      <Tooltip
+        title={
+          <div>
+            <div style={{ marginBottom: 8 }}><strong>定义：</strong>{info.definition}</div>
+            <div><strong>计算公式：</strong><code style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 6px', borderRadius: 4 }}>{info.formula}</code></div>
+          </div>
+        }
+      >
+        <QuestionCircleOutlined style={{ marginLeft: 4, cursor: 'help', color: '#999' }} />
+      </Tooltip>
+    </span>
+  );
+}
 
 function toNum(v: number | null | undefined) {
   return v ?? 0;
@@ -356,22 +378,22 @@ export function SalesPage() {
       <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
         <Col xs={24} sm={12} lg={6}>
           <Card>
-            <Statistic title="当月销售额" value={monthSales} precision={2} suffix="万元" />
+            <Statistic title={<KpiLabel label="当月销售额" indicatorKey="monthSales" />} value={monthSales} precision={2} suffix="万元" />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
           <Card>
-            <Statistic title="当月目标" value={monthTarget} precision={2} suffix="万元" />
+            <Statistic title={<KpiLabel label="当月目标" indicatorKey="monthTarget" />} value={monthTarget} precision={2} suffix="万元" />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6} id="kpi-month-achieve">
           <Card>
-            <Statistic title="当月达成率" value={monthAchieve} precision={2} suffix="%" />
+            <Statistic title={<KpiLabel label="当月达成率" indicatorKey="monthAchieveRate" />} value={monthAchieve} precision={2} suffix="%" />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
           <Card>
-            <Statistic title="最新回款额" value={latestReceivable} precision={2} suffix="万元" />
+            <Statistic title={<KpiLabel label="最新回款额" indicatorKey="collectionRate" />} value={latestReceivable} precision={2} suffix="万元" />
           </Card>
         </Col>
       </Row>

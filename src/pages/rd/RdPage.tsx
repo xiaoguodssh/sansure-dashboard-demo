@@ -1,7 +1,29 @@
-import { Card, Col, Row, Statistic, Tag, Typography } from 'antd';
+import { Card, Col, Row, Statistic, Tag, Tooltip, Typography } from 'antd';
+import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
+import { indicatorDefinitions } from '../../components/IndicatorTooltip';
+
+function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
+  const info = indicatorDefinitions[indicatorKey];
+  if (!info || info.isAtomic) return label;
+  return (
+    <span>
+      {label}
+      <Tooltip
+        title={
+          <div>
+            <div style={{ marginBottom: 8 }}><strong>定义：</strong>{info.definition}</div>
+            <div><strong>计算公式：</strong><code style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 6px', borderRadius: 4 }}>{info.formula}</code></div>
+          </div>
+        }
+      >
+        <QuestionCircleOutlined style={{ marginLeft: 4, cursor: 'help', color: '#999' }} />
+      </Tooltip>
+    </span>
+  );
+}
 
 function kpiTone(value: number, threshold: number) {
   if (value >= threshold) {
@@ -140,13 +162,13 @@ export function RdPage() {
       <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
         <Col xs={24} sm={12} lg={6}>
           <Card>
-            <Statistic title="在研项目数" value={rd.kpis.activeProjects} suffix="个" />
+            <Statistic title={<KpiLabel label="在研项目数" indicatorKey="activeProjects" />} value={rd.kpis.activeProjects} suffix="个" />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6} id="kpi-milestone-rate">
           <Card>
             <Statistic
-              title="里程碑按期达成率"
+              title={<KpiLabel label="里程碑按期达成率" indicatorKey="milestoneOnTimeRate" />}
               value={rd.kpis.milestoneOnTimeRate}
               precision={2}
               suffix="%"
@@ -157,7 +179,7 @@ export function RdPage() {
         <Col xs={24} sm={12} lg={6}>
           <Card>
             <Statistic
-              title="预算执行率"
+              title={<KpiLabel label="预算执行率" indicatorKey="budgetExecutionRate" />}
               value={rd.kpis.budgetExecutionRate}
               precision={2}
               suffix="%"
@@ -168,7 +190,7 @@ export function RdPage() {
         <Col xs={24} sm={12} lg={6}>
           <Card>
             <Statistic
-              title="注册节点按期率"
+              title={<KpiLabel label="注册节点按期率" indicatorKey="registrationNodeOnTimeRate" />}
               value={rd.kpis.registrationNodeOnTimeRate}
               precision={2}
               suffix="%"

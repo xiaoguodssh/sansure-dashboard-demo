@@ -1,8 +1,30 @@
-import { Card, Progress, Space, Tag, Typography } from 'antd';
+import { Card, Progress, Space, Tag, Tooltip, Typography } from 'antd';
+import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
 import { useFilterStore } from '../../store/filter/useFilterStore';
+import { indicatorDefinitions } from '../../components/IndicatorTooltip';
+
+function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
+  const info = indicatorDefinitions[indicatorKey];
+  if (!info) return label;
+  return (
+    <span>
+      {label}
+      <Tooltip
+        title={
+          <div>
+            <div style={{ marginBottom: 8 }}><strong>定义：</strong>{info.definition}</div>
+            <div><strong>计算公式：</strong><code style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 6px', borderRadius: 4 }}>{info.formula}</code></div>
+          </div>
+        }
+      >
+        <QuestionCircleOutlined style={{ marginLeft: 4, cursor: 'help', color: '#999' }} />
+      </Tooltip>
+    </span>
+  );
+}
 
 function normalizeToMonth(date: string) {
   return date.slice(0, 7);
@@ -177,7 +199,9 @@ export function OverviewPage() {
             style={{ cursor: 'pointer' }}
             onClick={() => navigate('/finance#kpi-operating-cashflow')}
           >
-            <Typography.Text type="secondary">{strategy.northStar.name}</Typography.Text>
+            <Typography.Text type="secondary">
+              <KpiLabel label={strategy.northStar.name} indicatorKey="northStar" />
+            </Typography.Text>
             <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 4 }}>
               {fmt2(strategy.northStar.current)} / {fmt2(strategy.northStar.target)} {strategy.northStar.unit}
             </Typography.Title>
@@ -221,7 +245,7 @@ export function OverviewPage() {
           onClick={() => navigate('/sales#kpi-month-achieve')}
           style={{ cursor: 'pointer' }}
         >
-          <Typography.Text type="secondary">营收达成率</Typography.Text>
+          <Typography.Text type="secondary"><KpiLabel label="营收达成率" indicatorKey="revenueRate" /></Typography.Text>
           <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
             {kpis.revenueRate}%
           </Typography.Title>
@@ -231,7 +255,7 @@ export function OverviewPage() {
           onClick={() => navigate('/finance#kpi-profit-rate')}
           style={{ cursor: 'pointer' }}
         >
-          <Typography.Text type="secondary">利润达成率</Typography.Text>
+          <Typography.Text type="secondary"><KpiLabel label="利润达成率" indicatorKey="profitRate" /></Typography.Text>
           <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
             {kpis.profitRate}%
           </Typography.Title>
@@ -241,7 +265,7 @@ export function OverviewPage() {
           onClick={() => navigate('/finance#kpi-operating-cashflow')}
           style={{ cursor: 'pointer' }}
         >
-          <Typography.Text type="secondary">经营性现金流（百万元）</Typography.Text>
+          <Typography.Text type="secondary"><KpiLabel label="经营性现金流（百万元）" indicatorKey="operatingCashFlow" /></Typography.Text>
           <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
             {kpis.operatingCashFlow}
           </Typography.Title>
@@ -251,7 +275,7 @@ export function OverviewPage() {
           onClick={() => navigate('/finance#kpi-collection-rate')}
           style={{ cursor: 'pointer' }}
         >
-          <Typography.Text type="secondary">回款达成率</Typography.Text>
+          <Typography.Text type="secondary"><KpiLabel label="回款达成率" indicatorKey="collectionRate" /></Typography.Text>
           <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
             {kpis.collectionRate}%
           </Typography.Title>
@@ -261,7 +285,7 @@ export function OverviewPage() {
           onClick={() => navigate('/rd#kpi-milestone-rate')}
           style={{ cursor: 'pointer' }}
         >
-          <Typography.Text type="secondary">研发里程碑达成率</Typography.Text>
+          <Typography.Text type="secondary"><KpiLabel label="研发里程碑达成率" indicatorKey="rdMilestoneRate" /></Typography.Text>
           <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
             {kpis.rdMilestoneRate}%
           </Typography.Title>
