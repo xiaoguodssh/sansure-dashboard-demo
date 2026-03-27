@@ -1,9 +1,11 @@
-import { Card, Col, Row, Statistic, Tag, Tooltip, Typography } from 'antd';
+import { Card, Col, Grid, Row, Statistic, Tag, Tooltip, Typography } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
 import { indicatorDefinitions } from '../../components/IndicatorTooltip';
+
+const { useBreakpoint } = Grid;
 
 function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
   const info = indicatorDefinitions[indicatorKey];
@@ -42,6 +44,11 @@ function fmt2(value: number) {
 export function RdPage() {
   const navigate = useNavigate();
   const rd = dashboardData.rd;
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
+  const isLargeScreen = screens.xl;
+  const chartHeight = isMobile ? 280 : isLargeScreen ? 380 : 330;
+  const chartHeightLarge = isMobile ? 300 : isLargeScreen ? 400 : 360;
 
   const milestoneOption = {
     tooltip: { trigger: 'axis', valueFormatter: (value: number) => `${fmt2(Number(value))}` },
@@ -203,17 +210,17 @@ export function RdPage() {
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={16}>
           <Card title="研发里程碑执行趋势">
-            <ReactECharts option={milestoneOption} style={{ height: 330 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={milestoneOption} style={{ height: chartHeight }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
         <Col xs={24} lg={8}>
           <Card title="项目阶段分布">
-            <ReactECharts option={stageOption} style={{ height: 330 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={stageOption} style={{ height: chartHeight }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
         <Col xs={24} lg={16}>
           <Card title="项目预算执行与进度">
-            <ReactECharts option={budgetOption} style={{ height: 360 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={budgetOption} style={{ height: chartHeightLarge }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
         <Col xs={24} lg={8}>
@@ -225,7 +232,7 @@ export function RdPage() {
               </span>
             }
           >
-            <ReactECharts option={riskOption} style={{ height: 360 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={riskOption} style={{ height: chartHeightLarge }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
       </Row>

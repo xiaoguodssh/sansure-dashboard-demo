@@ -1,4 +1,4 @@
-import { Card, Col, Row, Segmented, Space, Statistic, Tag, Tooltip, Typography } from 'antd';
+import { Card, Col, Grid, Row, Segmented, Space, Statistic, Tag, Tooltip, Typography } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useEffect } from 'react';
@@ -6,6 +6,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
 import { useFilterStore } from '../../store/filter/useFilterStore';
 import { indicatorDefinitions } from '../../components/IndicatorTooltip';
+
+const { useBreakpoint } = Grid;
 
 function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
   const info = indicatorDefinitions[indicatorKey];
@@ -68,6 +70,9 @@ export function SalesPage() {
   const filter = useFilterStore();
   const update = useFilterStore((s) => s.update);
   const focusCompany = (new URLSearchParams(location.search).get('company') || '').trim();
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
+  const isLargeScreen = screens.xl;
 
   useEffect(() => {
     if (!focusCompany) {
@@ -349,6 +354,9 @@ export function SalesPage() {
     click: () => navigate('/sales#kpi-month-achieve'),
   };
 
+  const chartHeight = isMobile ? 280 : isLargeScreen ? 380 : 330;
+  const chartHeightSmall = isMobile ? 260 : isLargeScreen ? 350 : 320;
+
   return (
     <div>
       <h1 className="page-title">销售专题（图表化展示）</h1>
@@ -402,7 +410,7 @@ export function SalesPage() {
         {filter.orgLevel === 'group' && (
           <Col span={24}>
             <Card id="chart-group-compare" title="集团层：国内营销/国际营销 + 子公司销售对比">
-              <ReactECharts option={groupOption} style={{ height: 340 }} onEvents={chartJumpEvents} />
+              <ReactECharts option={groupOption} style={{ height: chartHeight }} onEvents={chartJumpEvents} />
             </Card>
           </Col>
         )}
@@ -411,14 +419,14 @@ export function SalesPage() {
           <>
             <Col xs={24} lg={16}>
               <Card title="国内：产线销售与达成率">
-                <ReactECharts option={lineOption} style={{ height: 330 }} onEvents={chartJumpEvents} />
+                <ReactECharts option={lineOption} style={{ height: chartHeight }} onEvents={chartJumpEvents} />
               </Card>
             </Col>
             <Col xs={24} lg={8}>
               <Card title="国内：大区/省区达成雷达">
                 <ReactECharts
                   option={domesticRegionRadarOption}
-                  style={{ height: 330 }}
+                  style={{ height: chartHeight }}
                   onEvents={chartJumpEvents}
                 />
               </Card>
@@ -430,12 +438,12 @@ export function SalesPage() {
           <>
             <Col xs={24} lg={16}>
               <Card title="国际：区域销售与达成率">
-                <ReactECharts option={internationalOption} style={{ height: 330 }} onEvents={chartJumpEvents} />
+                <ReactECharts option={internationalOption} style={{ height: chartHeight }} onEvents={chartJumpEvents} />
               </Card>
             </Col>
             <Col xs={24} lg={8}>
               <Card title="国际：区域分组结构">
-                <ReactECharts option={intlGroupOption} style={{ height: 330 }} onEvents={chartJumpEvents} />
+                <ReactECharts option={intlGroupOption} style={{ height: chartHeight }} onEvents={chartJumpEvents} />
               </Card>
             </Col>
           </>
@@ -443,12 +451,12 @@ export function SalesPage() {
 
         <Col xs={24} lg={14}>
           <Card title="回款月度趋势">
-            <ReactECharts option={receivableOption} style={{ height: 320 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={receivableOption} style={{ height: chartHeightSmall }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
         <Col xs={24} lg={10}>
           <Card title={`毛利偏差散点（均值 ${grossMarginAvg.toFixed(2)}%）`}>
-            <ReactECharts option={marginScatterOption} style={{ height: 320 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={marginScatterOption} style={{ height: chartHeightSmall }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
       </Row>

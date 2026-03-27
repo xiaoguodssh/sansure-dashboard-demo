@@ -1,9 +1,11 @@
-import { Card, Col, Row, Statistic, Table, Tag, Tooltip } from 'antd';
+import { Card, Col, Grid, Row, Statistic, Table, Tag, Tooltip } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
 import { indicatorDefinitions } from '../../components/IndicatorTooltip';
+
+const { useBreakpoint } = Grid;
 
 function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
   const info = indicatorDefinitions[indicatorKey];
@@ -38,6 +40,10 @@ export function FinancePage() {
   const finance = dashboardData.finance;
   const monthly = finance.monthly;
   const recent = monthly.slice(-12);
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
+  const isLargeScreen = screens.xl;
+  const chartHeight = isMobile ? 280 : isLargeScreen ? 380 : 330;
 
   const trendOption = {
     tooltip: { trigger: 'axis', valueFormatter: (value: number) => `${fmt2(Number(value))}` },
@@ -163,12 +169,12 @@ export function FinancePage() {
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={16}>
           <Card title="近12个月收入/成本/毛利">
-            <ReactECharts option={trendOption} style={{ height: 330 }} onEvents={chartEvents} />
+            <ReactECharts option={trendOption} style={{ height: chartHeight }} onEvents={chartEvents} />
           </Card>
         </Col>
         <Col xs={24} lg={8}>
           <Card title="近12个月经营性现金流">
-            <ReactECharts option={cashOption} style={{ height: 330 }} onEvents={chartEvents} />
+            <ReactECharts option={cashOption} style={{ height: chartHeight }} onEvents={chartEvents} />
           </Card>
         </Col>
         <Col xs={24}>
@@ -177,8 +183,9 @@ export function FinancePage() {
               rowKey={(row) => row.month}
               dataSource={recent}
               pagination={false}
+              scroll={{ x: isMobile ? 600 : undefined }}
               columns={[
-                { title: '月份', dataIndex: 'month' },
+                { title: '月份', dataIndex: 'month', fixed: isMobile ? 'left' : undefined },
                 {
                   title: '收入(万元)',
                   dataIndex: 'revenue',
@@ -214,7 +221,7 @@ export function FinancePage() {
         </Col>
         <Col xs={24}>
           <Card title="近12个月毛利率与回款达成率">
-            <ReactECharts option={rateOption} style={{ height: 300 }} onEvents={chartEvents} />
+            <ReactECharts option={rateOption} style={{ height: isMobile ? 260 : isLargeScreen ? 350 : 300 }} onEvents={chartEvents} />
           </Card>
         </Col>
       </Row>

@@ -1,10 +1,12 @@
-import { Card, Progress, Space, Tag, Tooltip, Typography } from 'antd';
+import { Card, Col, Grid, Progress, Row, Space, Tag, Tooltip, Typography } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
 import { useFilterStore } from '../../store/filter/useFilterStore';
 import { indicatorDefinitions } from '../../components/IndicatorTooltip';
+
+const { useBreakpoint } = Grid;
 
 function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
   const info = indicatorDefinitions[indicatorKey];
@@ -50,6 +52,9 @@ function fmt2(value: number) {
 export function OverviewPage() {
   const navigate = useNavigate();
   const filter = useFilterStore();
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
+  const isLargeScreen = screens.xl;
   const start = normalizeToMonth(filter.dateRange[0]);
   const end = normalizeToMonth(filter.dateRange[1]);
   const scopeFactor = getScopeFactor(filter.marketScope);
@@ -202,7 +207,7 @@ export function OverviewPage() {
             <Typography.Text type="secondary">
               <KpiLabel label={strategy.northStar.name} indicatorKey="northStar" />
             </Typography.Text>
-            <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 4 }}>
+            <Typography.Title level={isMobile ? 4 : 3} style={{ marginTop: 8, marginBottom: 4 }}>
               {fmt2(strategy.northStar.current)} / {fmt2(strategy.northStar.target)} {strategy.northStar.unit}
             </Typography.Title>
             <Typography.Paragraph style={{ marginBottom: 8 }}>
@@ -211,98 +216,113 @@ export function OverviewPage() {
             <Progress percent={northStarProgress} status={northStarProgress >= 100 ? 'success' : 'active'} />
           </Card>
 
-          <div className="kpi-grid" style={{ marginBottom: 0 }}>
+          <Row gutter={[12, 12]}>
             {strategy.dimensions.map((dimension) => (
-              <Card
-                key={dimension.key}
-                hoverable
-                style={{ cursor: 'pointer' }}
-                onClick={() => navigate(dimension.kpis[0]?.route || '/overview')}
-              >
-                <Typography.Text type="secondary">{`${dimension.name}（权重 ${dimension.weight}%）`}</Typography.Text>
-                <Typography.Title level={4} style={{ marginTop: 8, marginBottom: 8 }}>
-                  {dimension.objective}
-                </Typography.Title>
-                <Space wrap size={[8, 8]}>
-                  {dimension.kpis.map((item) => (
-                    <Tag
-                      key={item.name}
-                      color={item.current >= item.target ? 'green' : item.current >= item.target * 0.92 ? 'gold' : 'red'}
-                    >
-                      {`${item.name}: ${fmt2(item.current)}${item.unit}`}
-                    </Tag>
-                  ))}
-                </Space>
-              </Card>
+              <Col xs={24} sm={12} lg={6} key={dimension.key}>
+                <Card
+                  hoverable
+                  style={{ cursor: 'pointer', height: '100%' }}
+                  onClick={() => navigate(dimension.kpis[0]?.route || '/overview')}
+                >
+                  <Typography.Text type="secondary">{`${dimension.name}（权重 ${dimension.weight}%）`}</Typography.Text>
+                  <Typography.Title level={isMobile ? 5 : 4} style={{ marginTop: 8, marginBottom: 8 }}>
+                    {dimension.objective}
+                  </Typography.Title>
+                  <Space wrap size={[8, 8]}>
+                    {dimension.kpis.map((item) => (
+                      <Tag
+                        key={item.name}
+                        color={item.current >= item.target ? 'green' : item.current >= item.target * 0.92 ? 'gold' : 'red'}
+                      >
+                        {`${item.name}: ${fmt2(item.current)}${item.unit}`}
+                      </Tag>
+                    ))}
+                  </Space>
+                </Card>
+              </Col>
             ))}
-          </div>
+          </Row>
         </Space>
       </Card>
 
-      <div className="kpi-grid">
-        <Card
-          hoverable
-          onClick={() => navigate('/sales#kpi-month-achieve')}
-          style={{ cursor: 'pointer' }}
-        >
-          <Typography.Text type="secondary"><KpiLabel label="营收达成率" indicatorKey="revenueRate" /></Typography.Text>
-          <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
-            {kpis.revenueRate}%
-          </Typography.Title>
-        </Card>
-        <Card
-          hoverable
-          onClick={() => navigate('/finance#kpi-profit-rate')}
-          style={{ cursor: 'pointer' }}
-        >
-          <Typography.Text type="secondary"><KpiLabel label="利润达成率" indicatorKey="profitRate" /></Typography.Text>
-          <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
-            {kpis.profitRate}%
-          </Typography.Title>
-        </Card>
-        <Card
-          hoverable
-          onClick={() => navigate('/finance#kpi-operating-cashflow')}
-          style={{ cursor: 'pointer' }}
-        >
-          <Typography.Text type="secondary"><KpiLabel label="经营性现金流（百万元）" indicatorKey="operatingCashFlow" /></Typography.Text>
-          <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
-            {kpis.operatingCashFlow}
-          </Typography.Title>
-        </Card>
-        <Card
-          hoverable
-          onClick={() => navigate('/finance#kpi-collection-rate')}
-          style={{ cursor: 'pointer' }}
-        >
-          <Typography.Text type="secondary"><KpiLabel label="回款达成率" indicatorKey="collectionRate" /></Typography.Text>
-          <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
-            {kpis.collectionRate}%
-          </Typography.Title>
-        </Card>
-        <Card
-          hoverable
-          onClick={() => navigate('/rd#kpi-milestone-rate')}
-          style={{ cursor: 'pointer' }}
-        >
-          <Typography.Text type="secondary"><KpiLabel label="研发里程碑达成率" indicatorKey="rdMilestoneRate" /></Typography.Text>
-          <Typography.Title level={3} style={{ marginTop: 8, marginBottom: 0 }}>
-            {kpis.rdMilestoneRate}%
-          </Typography.Title>
-        </Card>
-      </div>
+      <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
+        <Col xs={24} sm={12} md={8} lg={isLargeScreen ? 4 : 5}>
+          <Card
+            hoverable
+            onClick={() => navigate('/sales#kpi-month-achieve')}
+            style={{ cursor: 'pointer' }}
+          >
+            <Typography.Text type="secondary"><KpiLabel label="营收达成率" indicatorKey="revenueRate" /></Typography.Text>
+            <Typography.Title level={isMobile ? 4 : 3} style={{ marginTop: 8, marginBottom: 0 }}>
+              {kpis.revenueRate}%
+            </Typography.Title>
+          </Card>
+        </Col>
+        <Col xs={24} sm={12} md={8} lg={isLargeScreen ? 4 : 5}>
+          <Card
+            hoverable
+            onClick={() => navigate('/finance#kpi-profit-rate')}
+            style={{ cursor: 'pointer' }}
+          >
+            <Typography.Text type="secondary"><KpiLabel label="利润达成率" indicatorKey="profitRate" /></Typography.Text>
+            <Typography.Title level={isMobile ? 4 : 3} style={{ marginTop: 8, marginBottom: 0 }}>
+              {kpis.profitRate}%
+            </Typography.Title>
+          </Card>
+        </Col>
+        <Col xs={24} sm={12} md={8} lg={isLargeScreen ? 4 : 5}>
+          <Card
+            hoverable
+            onClick={() => navigate('/finance#kpi-operating-cashflow')}
+            style={{ cursor: 'pointer' }}
+          >
+            <Typography.Text type="secondary"><KpiLabel label="经营性现金流（百万元）" indicatorKey="operatingCashFlow" /></Typography.Text>
+            <Typography.Title level={isMobile ? 4 : 3} style={{ marginTop: 8, marginBottom: 0 }}>
+              {kpis.operatingCashFlow}
+            </Typography.Title>
+          </Card>
+        </Col>
+        <Col xs={24} sm={12} md={8} lg={isLargeScreen ? 4 : 5}>
+          <Card
+            hoverable
+            onClick={() => navigate('/finance#kpi-collection-rate')}
+            style={{ cursor: 'pointer' }}
+          >
+            <Typography.Text type="secondary"><KpiLabel label="回款达成率" indicatorKey="collectionRate" /></Typography.Text>
+            <Typography.Title level={isMobile ? 4 : 3} style={{ marginTop: 8, marginBottom: 0 }}>
+              {kpis.collectionRate}%
+            </Typography.Title>
+          </Card>
+        </Col>
+        <Col xs={24} sm={12} md={8} lg={isLargeScreen ? 4 : 5}>
+          <Card
+            hoverable
+            onClick={() => navigate('/rd#kpi-milestone-rate')}
+            style={{ cursor: 'pointer' }}
+          >
+            <Typography.Text type="secondary"><KpiLabel label="研发里程碑达成率" indicatorKey="rdMilestoneRate" /></Typography.Text>
+            <Typography.Title level={isMobile ? 4 : 3} style={{ marginTop: 8, marginBottom: 0 }}>
+              {kpis.rdMilestoneRate}%
+            </Typography.Title>
+          </Card>
+        </Col>
+      </Row>
 
-      <div className="chart-grid">
-        <Card title="经营趋势">
-          <ReactECharts option={trendOption} style={{ height: 320 }} onEvents={trendEvents} />
-        </Card>
-        <Card title="结构贡献">
-          <ReactECharts option={pieOption} style={{ height: 320 }} onEvents={pieEvents} />
-        </Card>
-      </div>
+      <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
+        <Col xs={24} lg={16}>
+          <Card title="经营趋势">
+            <ReactECharts option={trendOption} style={{ height: isMobile ? 280 : isLargeScreen ? 380 : 320 }} onEvents={trendEvents} />
+          </Card>
+        </Col>
+        <Col xs={24} lg={8}>
+          <Card title="结构贡献">
+            <ReactECharts option={pieOption} style={{ height: isMobile ? 280 : isLargeScreen ? 380 : 320 }} onEvents={pieEvents} />
+          </Card>
+        </Col>
+      </Row>
 
       <Card title={`异常榜单（${anomalies.length} 条）`} style={{ marginTop: 12 }}>
-        {anomalies.slice(0, 10).map((item) => (
+        {anomalies.slice(0, isMobile ? 5 : 10).map((item) => (
           <Typography.Paragraph key={`${item.org}-${item.metric}`} style={{ marginBottom: 8 }}>
             [{item.level}] {item.org} - {item.metric}: {item.value}%（阈值 {item.threshold}）
           </Typography.Paragraph>

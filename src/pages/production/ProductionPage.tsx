@@ -1,10 +1,12 @@
-import { Card, Col, Row, Statistic, Tooltip, Typography } from 'antd';
+import { Card, Col, Grid, Row, Statistic, Tooltip, Typography } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import ReactECharts from 'echarts-for-react';
 import { useNavigate } from 'react-router-dom';
 import { dashboardData } from '../../services/mock/dashboardData';
 import { indicatorDefinitions } from '../../components/IndicatorTooltip';
 import { EfficiencyDrillDown } from '../../components/EfficiencyDrillDown';
+
+const { useBreakpoint } = Grid;
 
 function KpiLabel({ label, indicatorKey }: { label: string; indicatorKey: keyof typeof indicatorDefinitions }) {
   const info = indicatorDefinitions[indicatorKey];
@@ -43,6 +45,11 @@ function fmt2(value: number) {
 export function ProductionPage() {
   const navigate = useNavigate();
   const hr = dashboardData.hr;
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
+  const isLargeScreen = screens.xl;
+  const chartHeight = isMobile ? 280 : isLargeScreen ? 380 : 320;
+  const chartHeightLarge = isMobile ? 300 : isLargeScreen ? 400 : 340;
 
   const trendOption = {
     tooltip: { trigger: 'axis', valueFormatter: (value: number) => `${fmt2(Number(value))}` },
@@ -199,7 +206,7 @@ export function ProductionPage() {
         </Col>
         <Col xs={24} lg={12}>
           <Card title="组织规模与人均产出趋势">
-            <ReactECharts option={trendOption} style={{ height: 320 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={trendOption} style={{ height: chartHeight }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
       </Row>
@@ -207,17 +214,17 @@ export function ProductionPage() {
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={12}>
           <Card title="部门离职率雷达">
-            <ReactECharts option={turnoverOption} style={{ height: 320 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={turnoverOption} style={{ height: chartHeight }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
         <Col xs={24} lg={12}>
           <Card title="部门编制与在岗对比">
-            <ReactECharts option={structureOption} style={{ height: 340 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={structureOption} style={{ height: chartHeightLarge }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
         <Col xs={24}>
           <Card title="人员规模与流失风险分布">
-            <ReactECharts option={scatterOption} style={{ height: 340 }} onEvents={chartJumpEvents} />
+            <ReactECharts option={scatterOption} style={{ height: chartHeightLarge }} onEvents={chartJumpEvents} />
           </Card>
         </Col>
       </Row>
